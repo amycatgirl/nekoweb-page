@@ -1,163 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>amycatgirl, home</title>
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
-    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="scripts/codeberg.js"></script>
-  </head>
 
-  <body class="bg-pink-950">
-    <nav class="flex p-1 gap-2">
-      <header class="color-pink-500">
-        <h1>AmyCatgirl</h1>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>amycatgirl, home</title>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+  <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+</head>
 
-      <p class="self-center color-pink-100">Insert tip here</p>
-    </nav>
+<body class="bg-pink-950">
+  <nav class="flex p-1 gap-2">
+    <header class="color-pink-500">
+      <h1>AmyCatgirl</h1>
+    </header>
 
-    <main class="color-pink-50">
-      <section title="Introduction">
-        <h2>Ummmm, hi!</h2>
-        <p>I am Amy. I'm 16 years old and I live in the Dominican Republic.</p>
-        <p>I love cats, foxes and red pandas!</p>
-        <p>
-          My hobby is programming small applications and websites, for example,
-          this website!
-        </p>
-      </section>
-      <section title="Setup">
-        <h2>I use Linux, btw</h2>
-        <p>No, not Arch. Just a regular, unmodified, fedora 38 installation.</p>
-        <p>
-          I don't want to update all of my packages updated to their latest
-          versions, specially if that means that I am prone of breaking my
-          system in a random update. And fedora works great anyway.
-        </p>
-        <h2>Full Setup</h2>
-        <ul>
-          <li>
-            <h3>Laptop:</h3>
-            <p>Lenovo Thinkpad P43s</p>
-          </li>
-          <li>
-            <h3>Code Editor:</h3>
-            <p>Neovim Nightly, specifically LazyVim</p>
-          </li>
-          <li>
-            <h3>This website's stack:</h3>
-            <ul>
-              <li>
-                <p>UnoCSS</p>
-              </li>
-              <li>
-                <p>HTML</p>
-              </li>
-              <li>
-                <p>Codeberg Pages</p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section title="Projects">
-        <h2>Projects</h2>
-        <p>
-          Below is a list of projects I've made, organized for your convenience.
-        </p>
-        <div class="bg-pink-700 p-4 mb-2 max-h-[10rem]" x-data="await get_repos()">
-          <template x-show="!failed" x-for="repo in data" :key="repo.id">
-            <div id="project">
-              <h2 x-text="repo.name"></h2>
-              <p x-text="description"></p>
-              <a x-bind:href="repo.html_url"
-                ><button class="">Go to repo</button></a
-              >
-            </div>
-          </template>
-          <div x-show="failed">
-            <h2 x-text="error"></h2>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>Website inspirations</h2>
-        <p>
-          This website is heavily inspired by
-          <a
-            class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer"
-            href="https://motherfuckingwebsite.com?utm_source='amycatgirl'"
-            target="_blank"
-            >Motherfucking Website</a
-          >, but since I wanted to give this website a bit of my touch, I added
-          UnoCSS to add styles.
-        </p>
-      </section>
-    </main>
+    <p class="self-center color-pink-100">Insert tip here</p>
+  </nav>
 
-    <footer
-      class="relative bottom-0 left-0 flex flex-row items-center justify-center color-violet-200 h-[5rem] p-1"
-    >
-      <span class="font-size-7">Amy (2023-20xx)</span>
-      <div class="ml-auto flex flex-row gap-3">
-        <a
-          class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer"
-          rel="me"
-          target="_blank"
-          href="https://tech.lgbt/@amycatgirl"
-          >Mastodon</a
-        >
-        <a
-          class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer"
-          target="_blank"
-          href="https://lemmy.blahaj.zone/u/amycatgirl"
-          >Lemmy</a
-        >
-        <a
-          class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer"
-          target="_blank"
-          href="https://codeberg.org/amycatgirl"
-          >Codeberg</a
-        >
-        <a
-          class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer"
-          target="_blank"
-          href="https://github.com/amycatgirl"
-          >Github</a
-        >
+  <main class="color-pink-50">
+    <section title="Introduction">
+      <h2>Ummmm, hi!</h2>
+      <p>I am Amy. I'm 16 years old and I live in the Dominican Republic.</p>
+      <p>I love cats, foxes and red pandas!</p>
+      <p>
+        My hobby is programming small applications and websites,
+        for example, this website!
+      </p>
+    </section>
+    <section title="Setup">
+      <h2>I use Linux, btw</h2>
+      <p>No, not Arch. Just a regular, unmodified, fedora 38 installation.</p>
+      <p>
+        I don't want to update all of my packages updated to their latest versions,
+        specially if that means that I am prone of breaking my system in a random
+        update. And fedora works great anyway.
+      </p>
+      <h2>Full Setup</h2>
+      <ul>
+        <li>
+          <h3>Laptop:</h3>
+          <p>Lenovo Thinkpad P43s</p>
+        </li>
+        <li>
+          <h3>Code Editor:</h3>
+          <p>Neovim Nightly, specifically LazyVim</p>
+        </li>
+        <li>
+          <h3>This website's stack:</h3>
+          <ul>
+            <li>
+              <p>UnoCSS</p>
+            </li>
+            <li>
+              <p>HTML</p>
+            </li>
+            <li>
+              <p>Codeberg Pages</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section title="Projects">
+      <h2>Projects</h2>
+      <p>Below is a list of projects I've made, organized for your convenience.
+      <div class="bg-pink-700 p-4 mb-2 max-h-[10rem]">
+        <h3>No Projects (QwQ)</h3>
+        <p>Check back soon!</p>
       </div>
-    </footer>
-  </body>
-  <script>
-    async function get_repos() {
-      try {
-        const response = await axios
-          .get(`https://codeberg.org/api/v1/users/amycatgirl/repos`, {
-            headers: {
-              "accept": "application/json",
-              "user-agent": "amycatgirl's website"
-            }
-          })
-          .then((res) => res.data);
+    </section>
+    <section>
+      <h2>Website inspirations</h2>
+      <p>
+        This website is heavily inspired by <a
+          class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer"
+          href="https://motherfuckingwebsite.com?utm_source='amycatgirl'" target="_blank">Motherfucking Website</a>,
+        but since I wanted to give this website a bit of my touch, I added UnoCSS to add styles.
+      </p>
+    </section>
+  </main>
 
-        return {
-          failed: false,
-          data: json,
-        };
-      } catch (error) {
-        console.error("[getrepos] Error whilst fetching repos:", error);
+  <footer class="relative bottom-0 left-0 flex flex-row items-center justify-center color-violet-200 h-[5rem] p-1">
+    <span class="font-size-7">Amy (2023-20xx)</span>
+    <div class="ml-auto flex flex-row gap-3">
+      <a class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer" rel="me" target="_blank"
+        href="https://tech.lgbt/@amycatgirl">Mastodon</a>
+      <a class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer" target="_blank"
+        href="https://lemmy.blahaj.zone/u/amycatgirl">Lemmy</a>
+      <a class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer" target="_blank"
+        href="https://codeberg.org/amycatgirl">Codeberg</a>
+      <a class="color-violet-200 no-underline hover:color-violet-500 cursor-pointer" target="_blank"
+        href="https://github.com/amycatgirl">Github</a>
+    </div>
+  </footer>
+</body>
 
-        return {
-          failed: true
-        };
-      }
-    }
-  </script>
 </html>

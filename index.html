@@ -7,6 +7,58 @@
   </head>
 
   <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+      * {
+          --base: #303446;
+          --text: #c6d0f5;
+          --pink: #f4b8e4;
+          --rose: #f2d5cf;
+      }
+
+      body {
+          background-color: var(--base);
+      }
+
+      p, h1, h2, h3{
+          color: var(--text);
+          font-family: 'Handlee', cursive;
+      }
+
+      li::marker {
+          color: var(--rose);
+      }
+
+      h1, h2, h3 {
+          color: var(--rose);
+      }
+
+      hr {
+          opacity:0;
+      }
+
+      a {
+          font-family: 'Handlee', cursive;
+          text-decoration:none;
+          color:var(--pink);
+      }
+
+      header h1{
+          width:30%;
+          text-align:center;
+          margin: auto;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: var(--rose);
+          font-size:300%;
+          font-family: 'Luckiest Guy', cursive;
+          color: var(--base);
+      }
+
+      footer{
+          text-align:center;
+      }
+    </style>
     <nav>
       <header>
         <h1>AmyCatgirl</h1>

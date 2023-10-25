@@ -1,0 +1,9 @@
+/* roboto-flex-regular */
+@font-face {
+	font-family: Roboto Flex;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Roboto Flex Regular"), local("RobotoFlex-Regular"), url(roboto-flex-regular.woff2) format("woff2");
+	font-display: swap;
+}
+

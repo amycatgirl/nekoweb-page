@@ -114,6 +114,28 @@
     #picker::before {
       content: "accent:"
     }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0%);
+      }
+
+      25% {
+        transform: translateY(-25%) rotate(90deg);
+      }
+
+      50% {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      75% {
+        transform: translateY(-25%) rotate(270deg);
+      }
+
+      100% {
+        transform: translateY(0%) rotate(360deg);
+      }
+    }
   </style>
   <nav>
     <header>
@@ -236,10 +258,13 @@
   <hr />
 
   <footer>
-    <p><button class="cat">🐈 <div class="target"><input type="color" id="picker" /></div></button> Amy (2023-20xx)</p>
+    <p><button class="cat">
+        <p id="animate">🐈</p>
+        <div class="target"><input type="color" id="picker" /></div>
+      </button> Amy (2023-20xx)</p>
     <div>
       <p>
-        <a rel="me" target="_blank" href="https://tech.lgbt/@amycatgirl">Mastodon</a>
+        <a rel="me" target="_blank" href="https://lea.pet/@amy">Fedi</a>
         · <a target="_blank" href="https://lemmy.blahaj.zone/u/amycatgirl">Lemmy</a>
         · <a target="_blank" href="https://codeberg.org/amycatgirl">Codeberg</a>
         · <a target="_blank" href="https://github.com/amycatgirl">Github</a>
@@ -314,7 +339,18 @@
   const colourInput = document.getElementById("picker");
   const root = document.querySelector(":root");
 
+  function animateElement(target, name, duration, easing) {
+    if (!name || !target) throw "Missing arguments";
+
+    const element = document.getElementById(target);
+    element.style.setProperty("animation-name", name);
+    element.style.setProperty("animation-duration", duration);
+    element.style.setProperty("animation-timing-function", easing);
+    element.style.setProperty("animation-fill-mode", "forwards");
+  }
+
   catButton.addEventListener("click", (ev) => {
+    animateElement("animate", "bounce", ".3s", "ease-in-out");
     target.style.setProperty("display", "block");
   });
 

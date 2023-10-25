@@ -11,7 +11,7 @@
   <style>
     @import url("static/fonts/index.css");
 
-    * {
+    :root {
       /* colours */
       --accent: #ff339d;
       --base: color-mix(in srgb, var(--accent) 10%, black);
@@ -81,6 +81,30 @@
 
     code.user {
       padding: 0 !important;
+    }
+
+    .cat {
+      border: none;
+      background: inherit;
+      font-size: inherit;
+      padding: none;
+      margin: none;
+    }
+
+    .target {
+      display: none;
+    }
+
+    #picker {
+      border: none;
+      padding: none;
+      margin-top: 20px;
+      background: transparent;
+      color: var(--text);
+    }
+
+    #picker::before {
+      content: "accent:"
     }
   </style>
   <nav>
@@ -204,7 +228,7 @@
   <hr />
 
   <footer>
-    <p>Amy (2023-20xx)</p>
+    <p><button class="cat">🐈 <div class="target"><input type="color" id="picker" /></div></button> Amy (2023-20xx)</p>
     <div>
       <p>
         <a rel="me" target="_blank" href="https://tech.lgbt/@amycatgirl">Mastodon</a>
@@ -270,7 +294,24 @@
     return Math.floor(Math.random() * limit);
   }
 
-  motd_line.innerText = QUOTES[rng(QUOTES.length)]
+  motd_line.innerText = QUOTES[rng(QUOTES.length)];
+
+  const catButton = document.querySelector(".cat");
+  const target = document.querySelector(".target");
+
+  const colourInput = document.getElementById("picker");
+  const root = document.querySelector(":root");
+
+  catButton.addEventListener("click", (ev) => {
+    target.style.setProperty("display", "block");
+  });
+
+  colourInput.value = "#ff339d";
+
+  colourInput.addEventListener("change", (ev) => {
+    root.style.setProperty("--accent", ev.currentTarget.value);
+  })
+
 </script>
 
 </html>

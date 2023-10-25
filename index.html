@@ -24,6 +24,14 @@
       --monospace: JetBrains Mono;
     }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --base: color-mix(in srgb, var(--accent) 10%, white);
+        --text: color-mix(in srgb, var(--accent) 50%, black);
+        --text-emphasis: color-mix(in srgb, var(--accent) 30%, black);
+      }
+    }
+
     body {
       background-color: var(--base);
       font-family: var(--body);
@@ -287,7 +295,11 @@
     "please don't use brave",
     "rygaidjokdsamfsakmlhgftdrseseseee sorry cat got on top of my keyboard",
     "mankind is dead, blood is fuel, hell is full",
-    "never gonna give you up, never gonna let you down, never gonna run arround and dessert you, never gonna make you cry, never gonna say goodbye, never gonna tell you a lie, and hurt you"
+    "never gonna give you up, never gonna let you down, never gonna run arround and dessert you, never gonna make you cry, never gonna say goodbye, never gonna tell you a lie, and hurt you",
+    "sternocleidomastoid",
+    "brought to you by raid shadow legends",
+    "mmmm that cat at the bottom of the page surely looks suspicious 🤔",
+    ""
   ];
 
   const rng = (limit) => {

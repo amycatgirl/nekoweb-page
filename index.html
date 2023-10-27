@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="" />
   <title>amycatgirl, home</title>
 </head>
 
@@ -101,18 +102,40 @@
 
     .target {
       display: none;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
     }
 
     #picker {
       border: none;
       padding: none;
-      margin-top: 20px;
       background: transparent;
       color: var(--text);
     }
 
-    #picker::before {
-      content: "accent:"
+    #base,
+    #text,
+    #text-emphasis {
+      width: fit-content;
+      height: auto;
+      padding: 3px;
+      border: 1px solid gray;
+    }
+
+    #base {
+      background: var(--base);
+      color: var(--text-emphasis);
+    }
+
+    #text {
+      background: var(--text);
+      color: var(--base);
+    }
+
+    #text-emphasis {
+      background: var(--text-emphasis);
+      color: var(--base);
     }
 
     @keyframes bounce {
@@ -204,17 +227,9 @@
             </p>
           </li>
           <li>
-            <h3>revolt-moonbase</h3>
+            <h3>Revite Plugins</h3>
             <p>
-              Read incoming and outcoming messages using Moonbase Alpha's
-              text-to-speech synthesizer!
-            </p>
-          </li>
-          <li>
-            <h3>revolt-prettylinks</h3>
-            <p>
-              Automatically format links in a message to follow the APL link
-              syntax
+              Plugins tailored for revolt.chat's Revite client.
             </p>
           </li>
           <li>
@@ -258,10 +273,15 @@
   <hr />
 
   <footer>
-    <p><button class="cat">
+    <p><button class="cat" title="Enable Dynamic Theme Devtools">
         <p id="animate">🐈</p>
-        <div class="target"><input type="color" id="picker" /></div>
-      </button> Amy (2023-20xx)</p>
+      </button> <span id="copyright">Amy (2023-20xx)</span></p>
+      <div class="target">
+          <input type="color" id="picker"><p>accent</p></input>
+          <div id="base">base</div>
+          <div id="text">text</div>
+          <div id="text-emphasis">emphasis</div>
+        </div>
     <div>
       <p>
         <a rel="me" target="_blank" href="https://lea.pet/@amy">Fedi</a>
@@ -324,40 +344,67 @@
     "sternocleidomastoid",
     "brought to you by raid shadow legends",
     "mmmm that cat at the bottom of the page surely looks suspicious 🤔",
-    ""
+    "(e)",
+    "typos, typos, tpyos!",
+    "thanks #google for Noto Color Emoji!",
+    "thanks #jetbrains for JetBrains Mono!",
+    "inspired by me.lea.pet!",
+    "stay hidrated!",
+    "say that again and I'll hit you with my goddamm laptop",
+    "why did it crash",
+    "ehhh, works on my machine",
+    "ooooOOOOoooooo",
+    "look mom, no frameworks!",
+    "I think all of these quotes need to be on it's own file",
+    "everything here is open source",
+    "🍪 here is your cookie for not disabling javascript",
+    "alert(1);"
   ];
 
   const rng = (limit) => {
-    return Math.floor(Math.random() * limit);
+    return Math.floor(Math.random() * (limit - 0 + 1) ) + 0;
   }
 
   motd_line.innerText = QUOTES[rng(QUOTES.length)];
 
   const catButton = document.querySelector(".cat");
   const target = document.querySelector(".target");
+  const copyright = document.querySelector("#copyright");
 
-  const colourInput = document.getElementById("picker");
+  const colourInput = document.querySelector("#picker");
   const root = document.querySelector(":root");
+  const themeColor = document.querySelector("meta[name='theme-color']");
 
   function animateElement(target, name, duration, easing) {
     if (!name || !target) throw "Missing arguments";
 
-    const element = document.getElementById(target);
+    const element = document.querySelector("#" + target);
     element.style.setProperty("animation-name", name);
-    element.style.setProperty("animation-duration", duration);
+    element.style.setProperty("animation-duration", `${duration}ms`);
     element.style.setProperty("animation-timing-function", easing);
     element.style.setProperty("animation-fill-mode", "forwards");
+
+    setTimeout(() => {
+      element.style.removeProperty("animation-name");
+      element.style.removeProperty("animation-duration");
+      element.style.removeProperty("animation-timing-function");
+      element.style.removeProperty("animation-fill-mode");
+    }, duration);
   }
 
   catButton.addEventListener("click", (ev) => {
-    animateElement("animate", "bounce", ".3s", "ease-in-out");
-    target.style.setProperty("display", "block");
+    animateElement("animate", "bounce", 300, "ease-in-out");
+    target.style.setProperty("display", "flex");
+    copyright.style.setProperty("display", "none");
   });
 
   colourInput.value = "#ff339d";
+  themeColor.content = "#ff339d";
+
 
   colourInput.addEventListener("change", (ev) => {
     root.style.setProperty("--accent", ev.currentTarget.value);
+    themeColor.content = root.style.getPropertyValue("--accent")
   })
 
 </script>

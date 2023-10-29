@@ -276,18 +276,20 @@
     <p><button class="cat" title="Enable Dynamic Theme Devtools">
         <p id="animate">🐈</p>
       </button> <span id="copyright">Amy (2023-20xx)</span></p>
-      <div class="target">
-          <input type="color" id="picker"><p>accent</p></input>
-          <div id="base">base</div>
-          <div id="text">text</div>
-          <div id="text-emphasis">emphasis</div>
-        </div>
+    <div class="target">
+      <input type="color" id="picker">
+      <p>accent</p></input>
+      <div id="base">base</div>
+      <div id="text">text</div>
+      <div id="text-emphasis">emphasis</div>
+    </div>
     <div>
       <p>
         <a rel="me" target="_blank" href="https://lea.pet/@amy">Fedi</a>
         · <a target="_blank" href="https://lemmy.blahaj.zone/u/amycatgirl">Lemmy</a>
         · <a target="_blank" href="https://codeberg.org/amycatgirl">Codeberg</a>
         · <a target="_blank" href="https://github.com/amycatgirl">Github</a>
+        · <a href="/blog">Blog</a>
       </p>
     </div>
   </footer>
@@ -362,7 +364,7 @@
   ];
 
   const rng = (limit) => {
-    return Math.floor(Math.random() * (limit - 0 + 1) ) + 0;
+    return Math.floor(Math.random() * (limit - 0 + 1)) + 0;
   }
 
   motd_line.innerText = QUOTES[rng(QUOTES.length)];

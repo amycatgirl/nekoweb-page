@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- TODO: use webcomponents -->
+
+<head>
+  <title>amycatgirl, blog</title>
+  <meta name="og:title" content="Amy's Personal Blog" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+</head>
+<style>
+  @import url("/dist/styles/dynamic.css");
+</style>
+
+<body>
+  <header>
+    <h1>Blog</h1>
+  </header>
+  <section id="latest">
+    <!--
+      I was planning on using something like a static site generator to generate my articles but I've
+      decided that it was too much of a hassle to set up for codeberg pages since I don't have CI/CD 
+      access. So I have to do calculations on the client 😭
+
+      Hopefully in the near future I can fully host this on codeberg using eleventy (i miss you dear)
+      - Amy, 28/10/23
+     -->
+
+    <div class="clickable big card">
+      <h2>Article Title</h2>
+      <p>Article description</p>
+    </div>
+  </section>
+  <section id="others">
+  </section>
+  <footer>
+    <p>Amy (2023-20xx)</p>
+    <div>
+      <p>
+        <a rel="me" target="_blank" href="https://lea.pet/@amy">Fedi</a>
+        · <a target="_blank" href="https://lemmy.blahaj.zone/u/amycatgirl">Lemmy</a>
+        · <a target="_blank" href="https://codeberg.org/amycatgirl">Codeberg</a>
+        · <a target="_blank" href="https://github.com/amycatgirl">Github</a>
+        · <a href="/">Go Home</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+/* noto-color-emoji */
+@font-face {
+	font-family: Noto Color Emoji;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Noto Color Emoji"), local("NotoColorEmoji"), url(/fonts/noto-color-emoji/noto-color-emoji.woff2) format("woff2");
+	font-display: swap;
+}
+

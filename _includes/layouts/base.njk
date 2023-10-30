@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title or metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+		<meta name="theme-color" content="" />
+
+		{#- Atom and JSON feeds included by default #}
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+
+		{#-
+		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
+		1. You can add to them using `{% css %}`
+		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
+		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+		#}
+
+		{#- Add an arbitrary string to the bundle #}
+		{#- Add the contents of a file to the bundle #}
+		{%- css %}{% include "public/css/dynamic.css" %}{% endcss %}
+		{%- css %}{% include "public/fonts/roboto-flex/roboto-flex.css"%}{% endcss %}
+		{%- css %}{% include "public/fonts/noto-color-emoji/noto-color-emoji.css"%}{% endcss %}
+		{%- css %}{% include "public/fonts/jetbrains-mono/jetbrains-mono.css"%}{% endcss %}
+		{#- Or add from node_modules #}
+		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
+
+		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
+		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+		  <nav>
+					<div>
+			      <a href="/"><h1>{{ metadata.title }}</h1></a>
+
+						<ul class="nav">
+							{%- for entry in collections.all | eleventyNavigation %}
+								<li class="item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+							{%- endfor %}
+						</ul>
+		      </div>
+					<code class="user">amycatgirl#9237</code>
+		      <p class="motd">
+		        <noscript>
+		          why do you have javascript disabled, i am not going to steal cookies out of the
+		          cookie jar you know :3
+		        </noscript>
+		      </p>
+		  </nav>
+
+		  <hr />
+		</header>
+
+		<main id="skip">
+			{{ content | safe }}
+		</main>
+
+		<footer>
+		
+	    <p><button class="cat" title="Enable Dynamic Theme Devtools">
+	        <p id="animate">🐈</p>
+	      </button> <span id="copyright">Amy (2023-20xx)</span></p>
+	    <div class="target">
+	      <input type="color" id="picker">
+	      <p>accent</p></input>
+	      <div id="base">base</div>
+	      <div id="text">text</div>
+	      <div id="text-emphasis">emphasis</div>
+	    </div>
+	    <div>
+	      <p>
+	        <a rel="me" target="_blank" href="https://lea.pet/@amy">Fedi</a>
+	        · <a target="_blank" href="https://lemmy.blahaj.zone/u/amycatgirl">Lemmy</a>
+	        · <a target="_blank" href="https://codeberg.org/amycatgirl">Codeberg</a>
+	        · <a target="_blank" href="https://github.com/amycatgirl">Github</a>
+	        · <a href="/blog">Blog</a>
+	      </p>
+	    </div>
+		</footer>
+
+		<script defer>
+		
+		  const motd_line = document.querySelector(".motd");
+
+		  const QUOTES = [
+		    "meow :3",
+		    "who needs responsive css, am i right?",
+		    "aesthetic ✨",
+		    "fun fact: this line changes every time you reload the page",
+		    "almost no js!!!",
+		    "eepy",
+		    "mrrp 🐈",
+		    "half-baked",
+		    "constantly begging for atention!",
+		    "hiiiiiiiii <- ketamine overdose",
+		    "mastodon is my home",
+		    "mmmmmmmm microwave 🤤",
+		    "🫵 cute",
+		    "🥺🥺🥺🥺🥺🥺🥺",
+		    "furries are cool people",
+		    "add quote here",
+		    "I am running out of quote ideas, send PRs to amycatgirl/pages!",
+		    "shoutouts to simpleflips",
+		    "make the internet cool!",
+		    "trans rights are human rights 🏳️‍⚧️",
+		    "🦈",
+		    "absolutely no easter eggs here, move along",
+		    "css is not my passion as you can see",
+		    "contrast issues are welcome on my bug tracker!",
+		    "techmino is fun!",
+		    "please play car game 3d wiht moodding support (trackmania 2 on ManiaPlanet)",
+		    "blog in progress",
+		    "You have such a cute profile! - Lucas @ Moshidon",
+		    "huh, how many of these are there",
+		    "i use ubuntu btw",
+		    "helix-editor is pretty good, go try it out!",
+		    "anxiety 100",
+		    ":cat_pleading_face:",
+		    "fun fact: change the --accent css variable to a different colour to change the site's theme!",
+		    "1/1 - Tuhana",
+		    "mlem",
+		    "oh god oh fuck",
+		    "you are based :)",
+		    "team fortress 2",
+		    "alexa, play despacito",
+		    "please don't use brave",
+		    "rygaidjokdsamfsakmlhgftdrseseseee sorry cat got on top of my keyboard",
+		    "mankind is dead, blood is fuel, hell is full",
+		    "never gonna give you up, never gonna let you down, never gonna run around and desert you, never gonna make you cry, never gonna say goodbye, never gonna tell you a lie, and hurt you",
+		    "sternocleidomastoid",
+		    "brought to you by raid shadow legends",
+		    "mmmm that cat at the bottom of the page surely looks suspicious 🤔",
+		    "(e)",
+		    "typos, typos, tpyos!",
+		    "thanks #google for Noto Color Emoji!",
+		    "thanks #jetbrains for JetBrains Mono!",
+		    "inspired by me.lea.pet!",
+		    "stay hidrated!",
+		    "say that again and I'll hit you with my goddamm laptop",
+		    "why did it crash",
+		    "ehhh, works on my machine",
+		    "ooooOOOOoooooo",
+		    "look mom, no frameworks!",
+		    "I think all of these quotes need to be on it's own file",
+		    "everything here is open source",
+		    "🍪 here is your cookie for not disabling javascript",
+		    "alert(1);"
+		  ];
+
+		  const rng = (limit) => {
+		    return Math.floor(Math.random() * (limit - 0 + 1)) + 0;
+		  }
+
+		  motd_line.innerText = QUOTES[rng(QUOTES.length)];
+
+		  const catButton = document.querySelector(".cat");
+		  const target = document.querySelector(".target");
+		  const copyright = document.querySelector("#copyright");
+
+		  const colourInput = document.querySelector("#picker");
+		  const root = document.querySelector(":root");
+		  const themeColor = document.querySelector("meta[name='theme-color']");
+
+		  function animateElement(target, name, duration, easing) {
+		    if (!name || !target) throw "Missing arguments";
+
+		    const element = document.querySelector("#" + target);
+		    element.style.setProperty("animation-name", name);
+		    element.style.setProperty("animation-duration", `${duration}ms`);
+		    element.style.setProperty("animation-timing-function", easing);
+		    element.style.setProperty("animation-fill-mode", "forwards");
+
+		    setTimeout(() => {
+		      element.style.removeProperty("animation-name");
+		      element.style.removeProperty("animation-duration");
+		      element.style.removeProperty("animation-timing-function");
+		      element.style.removeProperty("animation-fill-mode");
+		    }, duration);
+		  }
+
+		  catButton.addEventListener("click", (ev) => {
+		    animateElement("animate", "bounce", 300, "ease-in-out");
+		    target.style.setProperty("display", "flex");
+		    copyright.style.setProperty("display", "none");
+		  });
+
+		  colourInput.value = "#ff339d";
+		  themeColor.content = "#ff339d";
+
+
+		  colourInput.addEventListener("change", (ev) => {
+		    root.style.setProperty("--accent", ev.currentTarget.value);
+		    themeColor.content = root.style.getPropertyValue("--accent")
+		  })
+
+		</script>
+
+		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+	</body>
+</html>

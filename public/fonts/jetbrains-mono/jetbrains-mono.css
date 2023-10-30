@@ -1,0 +1,9 @@
+/* jetbrains-mono-regular */
+@font-face {
+	font-family: JetBrains Mono;
+	font-style: normal;
+	font-weight: 400;
+	src: local("JetBrains Mono Regular"), local("JetBrainsMono-Regular"), url(/fonts/jetbrains-mono/jetbrains-mono-regular.woff2) format("woff2");
+	font-display: swap;
+}
+

@@ -1,0 +1,10 @@
+	<ol reversed class="list">
+	{% for post in postslist | reverse %}
+		<a href="{{ post.url }}">
+		<li class="clickable card">
+			<h3 class="title">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</h2>
+			<time class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+		</li>
+		</a>
+	{% endfor %}
+	</ol>

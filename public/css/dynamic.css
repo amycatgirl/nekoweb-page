@@ -49,10 +49,7 @@ h3 {
 }
 
 .motd {
-  margin-left: auto;
-  margin-right: .2rem;
   font-size: 1.2em;
-  max-width: 35%;
   font-family: var(--monospace);
   overflow-wrap: break-word;
 }

@@ -28,6 +28,7 @@
 		{%- css %}{% include "public/fonts/roboto-flex/roboto-flex.css"%}{% endcss %}
 		{%- css %}{% include "public/fonts/noto-color-emoji/noto-color-emoji.css"%}{% endcss %}
 		{%- css %}{% include "public/fonts/jetbrains-mono/jetbrains-mono.css"%}{% endcss %}
+		{%- css %}{% include "public/css/marquee.css"%}{% endcss %}
 		{#- Or add from node_modules #}
 		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 
@@ -51,8 +52,9 @@
 						</li>
 					{%- endfor %}
 				</ul>
-
-				<p class="motd"><noscript>No javascript, no MOTD :3</noscript></p>
+				<div class="container">
+					<p class="motd marquee"><noscript>No javascript, no MOTD :3</noscript></p>
+				</div>
 		  </nav>
 
 		  <hr />
@@ -98,7 +100,7 @@
 		    "eepy",
 		    "mrrp 🐈",
 		    "half-baked",
-		    "constantly begging for atention!",
+		    "constantly begging for attention!",
 		    "hiiiiiiiii <- ketamine overdose",
 		    "mastodon is my home",
 		    "mmmmmmmm microwave 🤤",
@@ -159,6 +161,10 @@
 		  }
 
 		  motd_line.innerText = QUOTES[rng(QUOTES.length)];
+
+			setInterval(() => {
+			  motd_line.innerText = QUOTES[rng(QUOTES.length)];
+			}, 15000);
 
 		  const catButton = document.querySelector(".cat");
 		  const target = document.querySelector(".target");

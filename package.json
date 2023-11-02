@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "meow, this is my amazing webpage :3c",
   "scripts": {
-    "build": "eleventy --input=. --output=_site --formats=md,html,njk",
+    "build": "eleventy --formats=md,html,njk",
     "start": "eleventy --serve --port=8081"
   },
   "author": "amycatgirl",

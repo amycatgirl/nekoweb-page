@@ -1,5 +1,6 @@
 ---
 title: "Markdown Reference"
+date: 2023-11-02
 ---
 
 # Markdown: Syntax
@@ -23,10 +24,6 @@ title: "Markdown Reference"
 *   [Miscellaneous](#misc)
     *   [Backslash Escapes](#backslash)
     *   [Automatic Links](#autolink)
-
-
-**Note:** This document is itself written using Markdown; you
-can [see the source for it by adding '.text' to the URL](/projects/markdown/syntax.text).
 
 ----
 
@@ -115,9 +112,9 @@ and code blocks:
 > 2.   This is the second list item.
 > 
 > Here's some example code:
-> 
->     return shell_exec("echo $input | $markdown_script");
-
+> ```bash
+> return shell_exec("echo $input | $markdown_script");
+> ```
 Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
 Quote Level from the Text menu.
@@ -226,10 +223,7 @@ delimiters need to be indented:
 To put a code block within a list item, the code block needs
 to be indented *twice* -- 8 spaces or two tabs:
 
-*   A list item with a code block:
-```
-        <code goes here>
-```
+*   A list item with a code block: `<code goes here>`
 ### Code Blocks
 
 Pre-formatted code blocks are used for writing about programming or

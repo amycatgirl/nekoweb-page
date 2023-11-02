@@ -40,22 +40,19 @@
 		<header>
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 		  <nav>
-					<div>
-			      <a href="/"><h1>{{ metadata.title }}</h1></a>
+				<h1>{{ metadata.title }}</h1>
+				
+				<ul>
+					{%- for entry in collections.all | eleventyNavigation %}
+						<li class="item">
+							<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>
+								{{ entry.title }}
+							</a>
+						</li>
+					{%- endfor %}
+				</ul>
 
-						<ul class="nav">
-							{%- for entry in collections.all | eleventyNavigation %}
-								<li class="item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-							{%- endfor %}
-						</ul>
-		      </div>
-					<code class="user">amycatgirl#9237</code>
-		      <p class="motd">
-		        <noscript>
-		          why do you have javascript disabled, i am not going to steal cookies out of the
-		          cookie jar you know :3
-		        </noscript>
-		      </p>
+				<p class="motd"><noscript>No javascript, no MOTD :3</noscript></p>
 		  </nav>
 
 		  <hr />

@@ -26,6 +26,10 @@ body {
   font-family: var(--body);
 }
 
+main {
+  margin-left: 15px;
+}
+
 p,
 span {
   color: var(--text);
@@ -45,9 +49,12 @@ h3 {
 }
 
 .motd {
+  margin-left: auto;
+  margin-right: .2rem;
   font-size: 1.2em;
   max-width: 35%;
   font-family: var(--monospace);
+  overflow-wrap: break-word;
 }
 
 hr {
@@ -55,8 +62,12 @@ hr {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--text-emphasis);
+}
+
+nav a {
+  text-decoration: none;
 }
 
 header h1 {
@@ -74,6 +85,12 @@ pre {
   color: var(--text-emphasis);
   padding: 5px;
   border-radius: 25px;
+}
+
+code {
+  padding: unset;
+  border-radius: 4px;
+  background-color: var(--mantle);
 }
 
 code.user {
@@ -95,12 +112,32 @@ code.user {
   justify-content: center;
 }
 
-div:has(.nav) {
-  background-color: var(--mantle);
+nav {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   gap: 2rem;
   align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+nav li {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--mantle);
+}
+
+
+li>a[aria-current] {
+  opacity: .5;
+  cursor: normal;
 }
 
 header {
@@ -111,25 +148,6 @@ header {
 header h1 {
   margin-left: 1rem;
 }
-
-.nav {
-  padding: 50px;
-  border-radius: 5px;
-}
-
-.nav {
-  margin: unset;
-  list-style-type: none !important;
-}
-
-.nav li {
-  margin: unset;
-}
-
-li a {
-  text-decoration: underline;
-}
-
 
 #picker {
   border: none;
@@ -185,8 +203,15 @@ li a {
   padding: 5px;
 
   background-color: var(--mantle);
-  border: 1px solid var(--text);
   border-radius: 5px;
+}
+
+.card * {
+  margin-left: 10px;
+}
+
+.card:last-child * {
+  margin-bottom: 10px;
 }
 
 .header-anchor {
@@ -196,13 +221,19 @@ li a {
   margin-left: .1em;
 }
 
+ol.list {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: .5rem;
+}
+
 a[href].header-anchor,
 a[href].header-anchor:visited {
   color: transparent;
 }
 
 a[href].header-anchor:focus,
-
 a[href].header-anchor:hover {
   text-decoration: underline;
 }

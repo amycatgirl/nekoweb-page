@@ -111,7 +111,7 @@ code.user {
 
 nav {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   gap: 2rem;
   align-items: center;
 }

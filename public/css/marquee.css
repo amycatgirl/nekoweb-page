@@ -14,10 +14,12 @@
 
 div.container {
   overflow: hidden;
-  margin-left: auto;
   margin-right: .2rem;
+  width: 100%;
 }
 
 .marquee {
+  overflow-wrap: none !important;
+  word-wrap: none !important;
   animation: marquee 15s linear infinite;
 }

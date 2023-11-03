@@ -19,5 +19,6 @@ div.container {
 }
 
 .marquee {
+  text-align: center;
   animation: marquee 10s linear infinite;
 }

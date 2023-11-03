@@ -19,9 +19,5 @@ div.container {
 }
 
 .marquee {
-  overflow-wrap: none !important;
-  word-wrap: none !important;
-  width: fit-content;
-  flex-grow: none;
-  animation: marquee 15s linear infinite;
+  animation: marquee 10s linear infinite;
 }

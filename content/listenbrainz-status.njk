@@ -8,10 +8,13 @@
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams);
     const username = urlParams.get('username') || "amycatgirl";
     
     const time = urlParams.get('interval') || 3;
+
+    const accent = urlParams.get('accent') || "FAA2FD";
+
+    document.querySelector(":root").style.setProperty("--accent", "#" + accent);
 
     let current;
 
@@ -70,8 +73,8 @@
 
   <style>
     :root {
-      --fg: #66004b;
-      --fg-emphasis: #140C14;
+      --fg: color-mix(in srgb, var(--accent) 40%, black);
+      --fg-emphasis: color-mix(in srgb, var(--accent) 10%, black);
       --font: JetBrains Mono;
     }
 

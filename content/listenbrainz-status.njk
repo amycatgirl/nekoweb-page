@@ -1,0 +1,160 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"
+    integrity="sha512-BrvVYNhKh6yST24E5DY/LopLO5d+8KYmIXyrpBIJ2PK+CyyJw/cLSG/BfJomWLC1IblNrmiJWGlrGueKLd/Ekw=="
+    crossorigin="anonymous"></script>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams);
+    const username = urlParams.get('username') || "amycatgirl";
+    
+    const time = urlParams.get('interval') || 3;
+
+    let current;
+
+    function update(previous, onSuccess) {
+      fetch(`https://api.listenbrainz.org/1/user/${username}/playing-now`)
+        .then(response => response.json())
+        .then(json => {
+          if (!json.payload.listens) {
+            $("#music").css("display", "none");
+            $("#nomusic").css("display", "flex");
+            return;
+          }
+
+
+
+          const trackSrc = json.payload.listens[0].track_metadata;
+
+          const track = {
+            title: trackSrc.track_name,
+            artist: trackSrc.artist_name,
+            album: trackSrc.release_name
+          };
+
+
+          if (!!previous && previous.title == track.title && previous.album == track.album) return;
+
+          $("#music").css("display", "flex");
+          $("#nomusic").css("display", "none");
+
+          console.info(`new track: ${track.title} - ${track.artist}`);
+          return track;
+        })
+        .then(onSuccess)
+        .catch(e => {
+          console.error("error fetching listenbrainz api:", e);
+          return;
+        });
+    }
+
+    function setNew(details) {
+      if (!details) {
+        return
+      };
+
+      current = details;
+
+      $("#track").html(details.title);
+      $("#artist").html(details.artist);
+      $("#album").html(details.album);
+    }
+
+    setInterval(function () {
+      update(current, setNew);
+    }, time * 1000)
+  </script>
+
+  <style>
+    :root {
+      --fg: #66004b;
+      --fg-emphasis: #140C14;
+      --font: JetBrains Mono;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+
+      font-size: 1.5em;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      color: var(--fg-emphasis);
+      font-family: var(--font);
+      font-weight: 900;
+    }
+
+    h4 {
+      color: var(--fg);
+      font-family: var(--font);
+      font-weight: 400;
+    }
+
+    main.widget {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: nowrap;
+      overflow-wrap: none;
+      text-wrap: none;
+    }
+
+
+    @keyframes marquee {
+      0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%)
+      }
+
+      100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
+    }
+
+    div.container {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .marquee {
+      text-align: center;
+      animation: marquee 10s linear infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="nomusic" class="widget">
+    <h2>No music is playing</h2>
+  </main>
+  <main id="music" class="marquee widget">
+    <h2 id="track">Loading...</h2>
+
+    <p class="bullet">&#x2022;</p>
+
+    <h4 id="artist">Loading...</h4>
+
+    <p class="bullet">&#x2022;</p>
+
+    <h4 id="album">Loading...</h4>
+  </main>
+
+</body>
+
+</html>

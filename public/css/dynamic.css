@@ -67,6 +67,14 @@ nav a {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 700px) {
+
+  .marquee,
+  .motd {
+    display: none !important;
+  }
+}
+
 header h1 {
   font-size: 3em;
   line-height: .5em;

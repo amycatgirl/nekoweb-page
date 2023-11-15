@@ -295,3 +295,49 @@ h2+.header-anchor {
     transform: translateY(0%) rotate(360deg);
   }
 }
+
+@keyframes left {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(20%);
+  }
+}
+
+.fedi a {
+  padding: 5px;
+  background: var(--mantle);
+  border-radius: 5px;
+}
+
+.fedi a:first-child:hover {
+  animation-name: left;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.fedi a:last-child:hover {
+  animation-name: right;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.fedi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

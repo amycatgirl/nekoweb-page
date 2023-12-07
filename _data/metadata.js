@@ -1,5 +1,5 @@
 module.exports = {
-	title: "Amy",
+	title: "amycatgirl",
 	url: "https://amycatgirl.codeberg.page/",
 	language: "en",
 	description: "Developer, designer and full-time catgirl",

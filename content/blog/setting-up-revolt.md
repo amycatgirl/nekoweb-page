@@ -2,7 +2,6 @@
 title: Setting up revolt.chat for backend development, a better guide
 date: 2023-12-07
 tags: ["revolt", "backend", "rust", "docker"]
-draft: true
 ---
 
 ## Table of contents

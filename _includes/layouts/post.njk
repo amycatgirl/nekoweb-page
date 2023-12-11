@@ -8,7 +8,13 @@ layout: layouts/base.njk
 
 <section class="metadata">
 	<p>Written: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
-	{%- if page.updatedAt %}<p>Last Updated: <time datetime="{{ page.updatedAt | htmlDateString }}">{{page.updatedAt | readableDate}}</time></p>{% endif %}
+	{% if updated %}
+		<p>Last Updated:
+			<time datetime="{{ updated | htmlDateString }}">
+				{{updated | readableDate}}
+			</time>
+		</p>
+	{% endif %}
 	<p>
 		{%- for tag in tags | filterTagList %}
 		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}

@@ -12,7 +12,7 @@
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+		<meta name="generator" content="{{ eleventy.generator }}">
 
 		{#-
 		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
@@ -38,6 +38,11 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+		<meta property="og:title" content="{{ title or metadata.title }}" />
+		<meta property="og:locale" content="{{ metadata.language }}" />
+		<meta property="og:description" content="{{ description or metadata.description }}" />
+		<meta property="og:url" content="{{ metadata.author.url }}{{ page.url }}" />
+		<meta property="og:site_name" content="{{ metadata.title }}" />
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
@@ -93,7 +98,7 @@
 		        · <a target="_blank" href="https://lemmy.blahaj.zone/u/amycatgirl">Lemmy</a>
 		        · <a target="_blank" href="https://codeberg.org/amycatgirl">Codeberg</a>
 		        · <a target="_blank" href="https://github.com/amycatgirl">Github</a>
-		        · <a href="/blog">Blog</a>
+		        · <a href="/license">Licenses</a>
 		      </p>
 		    </div>
 		</footer>

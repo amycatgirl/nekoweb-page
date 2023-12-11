@@ -1,11 +1,11 @@
 module.exports = {
 	title: "amycatgirl",
 	url: "https://amycatgirl.codeberg.page/",
-	language: "en",
+	language: "en-GB",
 	description: "Developer, designer and full-time catgirl",
 	author: {
 		name: "Amy Perez",
 		email: "amycatgirlnya@example.com",
-		url: "https://amycatgirl.codeberg.page/"
+		url: "https://amycatgirl.codeberg.page"
 	}
 }

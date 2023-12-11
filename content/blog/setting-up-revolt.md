@@ -442,7 +442,7 @@ First-Party clients are clients that are officially managed and maintained by th
 - revoltchat/ios (Unreleased)
 
 Third-Party clients, in the other hand, are completely community-led. There are multiple clients available, but I am going to mention a few:
-- error404nullnotfound/retaped [[Link]](https://meowcity.club/retaped/src/?utm_source=amycatgirl) [[GitHub]](https://github.com/error404nullnotfound/retaped)
+- error-404-null-not-found/retaped [[Link]](https://meowcity.club/retaped/src/?utm_source=amycatgirl) [[GitHub]](https://github.com/error-404-null-not-found/retaped)
 - itzthemeow/svolte [[Link]](https://revolt.itsmeow.cat/?utm_source=amycatgirl) [[GitHub]](https://github.com/itzthemeow/revolt-svolte)
 - revoltchat/rvmob [[GitHub]](https://github.com/revoltchat/rvmob)
 - revoltchat/mutiny [[GitHub]](https://github.com/revoltchat/mutiny)

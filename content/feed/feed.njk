@@ -18,6 +18,7 @@ permalink: /feed/feed.xml
 	{% set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.url) }}{% endset %}
 	<entry>
 		<title>{{ post.data.title }}</title>
+		<description>{{ post.data.description }}</description>
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | dateToRfc3339 }}</updated>
 		<id>{{ absolutePostUrl }}</id>

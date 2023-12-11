@@ -4,7 +4,21 @@ eleventyNavigation:
   key: Blog
   order: 2
 ---
-<h1>Posts</h1>
+<div class="header">
+  <h1>Posts</h1>
+  <a class="material-symbols-outlined" href="/feed/feed.xml">
+    rss_feed
+  </a>
+</div>
 
 {% set postslist = collections.posts %}
 {% include "postlist.njk" %}
+
+<style>
+  div.header {
+    display: flex;
+    gap: 1rem;
+
+    align-items: center;
+  }
+</style>

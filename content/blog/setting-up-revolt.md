@@ -2,6 +2,7 @@
 title: Setting up revolt.chat for backend development, a better guide
 date: 2023-12-07
 tags: ["revolt", "backend", "rust", "docker"]
+description: Extensive tutorial on how to set up Revolt.Chat, an open source, contributor-backed, discord/slack alternative for communities
 ---
 
 ## Table of contents

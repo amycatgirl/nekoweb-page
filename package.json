@@ -17,6 +17,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "luxon": "^3.4.3",
     "markdown-it-anchor": "^8.6.7",
+    "markdown-it-footnote": "^4.0.0",
     "prismjs": "^1.29.0"
   }
 }

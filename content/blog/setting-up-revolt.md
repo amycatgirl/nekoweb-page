@@ -490,13 +490,21 @@ This is also my first, lenghty article on this blog! Feel free to point out typo
 
 If you want to learn more about a certain topic, you can use the sources provided below.
 
-## Sources and more information
-- [^1] Docker. (2020b, February 10). Overview of Docker Compose. Docker Documentation; Docker. https://docs.docker.com/compose/
-- [^2] Github. (2023b, December 6). Revolt Backend. GitHub; Microsoft. https://github.com/revoltchat/backend
-- [^3] Github. (2023a, December 5). Self-hosted. GitHub; Microsoft. https://github.com/revoltchat/self-hosted
-- [^4] Makles, P. (2021, July 12). Contribution guide (S. L & Kuhnchris, Eds.). Developers.revolt.chat; Revolt Communications. https://developers.revolt.chat/contributing
-- [^5] Ueyama, R. (2023, December 7). mold: A Modern Linker. GitHub. https://github.com/rui314/mold
-- [^6] Docker. (2020a, February 10). Install Docker Compose. Docker Documentation; Docker. https://docs.docker.com/compose/install/
-- [^7] Microsoft. (n.d.-a). Running Visual Studio Code on Linux. Code.visualstudio.com; Microsoft. Retrieved December 7, 2023, from https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions
-- [^8] Microsoft. (n.d.-b). rust-analyzer - Visual Studio Marketplace. Marketplace.visualstudio.com; Microsoft. Retrieved December 7, 2023, from https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
-- [^9] The OpenJS Foundation. (n.d.). Installing Node.js via package manager | Node.js. Nodejs.org; The OpenJS Foundation. Retrieved December 8, 2023, from https://nodejs.org/en/download/package-manager#centos-fedora-and-red-hat-enterprise-linux
+
+[^1]: Docker. (2020b, February 10). Overview of Docker Compose. Docker Documentation; Docker. https://docs.docker.com/compose/
+
+[^2]: Github. (2023b, December 6). Revolt Backend. GitHub; Microsoft. https://github.com/revoltchat/backend
+
+[^3]: Github. (2023a, December 5). Self-hosted. GitHub; Microsoft. https://github.com/revoltchat/self-hosted
+
+[^4]: Makles, P. (2021, July 12). Contribution guide (S. L & Kuhnchris, Eds.). Developers.revolt.chat; Revolt Communications. https://developers.revolt.chat/contributing
+
+[^5]: Ueyama, R. (2023, December 7). mold: A Modern Linker. GitHub. https://github.com/rui314/mold
+
+[^6]: Docker. (2020a, February 10). Install Docker Compose. Docker Documentation; Docker. https://docs.docker.com/compose/install/
+
+[^7]: Microsoft. (n.d.-a). Running Visual Studio Code on Linux. Code.visualstudio.com; Microsoft. Retrieved December 7, 2023, from https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions
+
+[^8]: Microsoft. (n.d.-b). rust-analyzer - Visual Studio Marketplace. Marketplace.visualstudio.com; Microsoft. Retrieved December 7, 2023, from https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
+
+[^9]: The OpenJS Foundation. (n.d.). Installing Node.js via package manager | Node.js. Nodejs.org; The OpenJS Foundation. Retrieved December 8, 2023, from https://nodejs.org/en/download/package-manager#centos-fedora-and-red-hat-enterprise-linux

@@ -6,9 +6,16 @@ eleventyNavigation:
 ---
 <div class="header">
   <h1>Posts</h1>
-  <a class="material-symbols-outlined" href="/feed/feed.xml">
+  <a class="material-symbols-outlined" title="RSS Feed" href="/feed/feed.xml">
     rss_feed
   </a>
+  <a class="material-symbols-outlined" title="JSONFeed" href="/feed/feed.json">
+    data_object
+  </a>
+  <a class="material-symbols-outlined" title="Tags" href="/tags/">
+    sell
+  </a>
+
 </div>
 
 {% set postslist = collections.posts %}

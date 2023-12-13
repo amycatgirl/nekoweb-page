@@ -29,6 +29,9 @@ dependencies:
   markdown-it-anchor:
     specifier: ^8.6.7
     version: 8.6.7(@types/markdown-it@13.0.5)(markdown-it@13.0.2)
+  markdown-it-footnote:
+    specifier: ^4.0.0
+    version: 4.0.0
   prismjs:
     specifier: ^1.29.0
     version: 1.29.0
@@ -1111,6 +1114,10 @@ packages:
     dependencies:
       '@types/markdown-it': 13.0.5
       markdown-it: 13.0.2
+    dev: false
+
+  /markdown-it-footnote@4.0.0:
+    resolution: {integrity: sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ==}
     dev: false
 
   /markdown-it@13.0.2:

@@ -7,20 +7,31 @@ layout: layouts/base.njk
 <h1>{{ title }}</h1>
 
 <section class="metadata">
-	<p>Written: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
+	<p>
+		<span class="material-symbols-outlined">article</span>
+		Written:
+		<time datetime="{{ page.date | htmlDateString }}">
+			{{ page.date | readableDate }}
+		</time>
+	</p>
 	{% if updated %}
-		<p>Last Updated:
+		<p>
+			<span class="material-symbols-outlined">edit</span>
+			Last Updated:
 			<time datetime="{{ updated | htmlDateString }}">
 				{{updated | readableDate}}
 			</time>
 		</p>
 	{% endif %}
-	<p>
-		{%- for tag in tags | filterTagList %}
-		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-		<a href="{{ tagUrl }}" class="tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
-		{%- endfor %}
-	</p>
+	{% if tags | filterTagList | length %}
+		<p>
+			<span class="material-symbols-outlined">sell</span>
+			{%- for tag in tags | filterTagList %}
+			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+			<a href="{{ tagUrl }}" class="tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
+			{%- endfor %}
+		</p>
+	{% endif %}
 </section>
 
 <article>
@@ -31,9 +42,10 @@ layout: layouts/base.njk
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
+<hr />
+<div class="links-nextprev">
+	{%- if previousPost %}<p><b>Previous Post:</b> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></p>{% endif %}
+	{%- if nextPost %}<p><b>Next Post:</b> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
+</div>
 {%- endif %}
 {%- endif %}

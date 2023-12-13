@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItFootnote = require("markdown-it-footnote");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -88,12 +89,19 @@ module.exports = function (eleventyConfig) {
       permalink: markdownItAnchor.permalink.ariaHidden({
         placement: "after",
         class: "header-anchor",
-        symbol: "#",
+        symbol: "<span class='material-symbols-outlined center'>link</span>",
         ariaHidden: false,
       }),
       level: [1, 2, 3, 4],
       slugify: eleventyConfig.getFilter("slugify"),
     });
+
+    mdLib.use(markdownItFootnote);
+    mdLib.renderer.rules.footnote_block_open = () => (
+      '<h2>Sources</h2>\n' +
+    '<section class="footnotes">\n' +
+    '<ol class="footnotes-list">\n'
+    );
   });
 
   eleventyConfig.addNunjucksGlobal("currentYear", new Date().getFullYear());

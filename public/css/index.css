@@ -172,6 +172,17 @@ article :is(h1,h2,h3,h4,h5,h6):hover a[class="header-anchor"]{
     opacity: 1;
 }
 
+.list h3.title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list h3.title .needsProofreading {
+    color: yellow;
+    cursor: help;
+}
+
 @keyframes bounce {
     0% {
         transform: translateY(0%);

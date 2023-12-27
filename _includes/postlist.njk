@@ -1,6 +1,11 @@
 	<div reversed class="list">
 	{% for post in postslist | reverse %}
 			<h3 class="title">
+				{% if post.data.tags and "needs-proofreading" in post.data.tags %}
+					<span class="material-symbols-outlined needsProofreading" title="This article needs proofreading, please your send feedback to @amycatgirl@wetdry.world">
+						warning
+					</span>
+				{% endif %}
 				<code>
 					<time class="date" datetime="{{ post.date | htmlDateString }}">
 						{{ post.date | readableDate("LLLL yyyy") }}

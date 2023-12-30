@@ -1,0 +1,10 @@
+.list h3.title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list h3.title .needsProofreading {
+    color: yellow;
+    cursor: help;
+}

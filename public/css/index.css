@@ -134,55 +134,6 @@ section#fediring nav.fedi a {
     text-decoration: none;
 }
 
-section.metadata p {
-    display: flex;
-    align-items: center;
-}
-
-section.metadata p span {
-    margin-right: 1rem;
-}
-
-section.metadata p time,
-section.metadata p a.tag {
-    margin-left: 3px;
-}
-
-section.metadata p a.tag:first-of-type {
-    margin-left: unset;
-}
-
-a[class="header-anchor"] {
-    opacity: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: 100ms opacity ease-in;
-}
-
-article :is(h1, h2, h3, h4, h5, h6) {
-    display: flex;
-    gap: 5px;
-
-    margin: 5px 0;
-}
-
-article :is(h1,h2,h3,h4,h5,h6):hover a[class="header-anchor"]{
-    opacity: 1;
-}
-
-.list h3.title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.list h3.title .needsProofreading {
-    color: yellow;
-    cursor: help;
-}
-
 @keyframes bounce {
     0% {
         transform: translateY(0%);

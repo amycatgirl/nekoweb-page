@@ -1,0 +1,30 @@
+a.tag {
+    border: 2px solid var(--colour-emphasis);
+    border-radius: 8px;
+    padding: 5px;
+
+    text-decoration: none;
+    color: var(--colour-emphasis);
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+
+.red {
+    background-color: #FFA9A955;
+}
+
+.green {
+    background-color: #BDFFB755;
+}
+
+.blue {
+    background-color: #A7B0FF55;
+}
+
+.orange {
+    background-color: #FFDF8D55;
+}
+
+.purple {
+    background-color: #EDA5FF55;
+}

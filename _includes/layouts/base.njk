@@ -14,28 +14,7 @@
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		<meta name="generator" content="{{ eleventy.generator }}">
 
-		{#-
-		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. You can add to them using `{% css %}`
-		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
-		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
-
-		{#- Add an arbitrary string to the bundle #}
-		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		{% if page.url === "/blog/" %}
-			{%- css %}{% include "public/css/list.css" %}{% endcss %}
-		{% elif "/blog/" in page.url %}
-			{%- css %}{% include "public/css/article.css" %}{% endcss %}
-		{% endif %}
-		{%- css %}{% include "public/css/dynamic.css" %}{% endcss %}
-		{#- Or add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
-
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+		<link rel="stylesheet" href="/styles/base.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -52,128 +31,19 @@
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header class="navigation">
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-		  <nav>
-				<h1>{{ metadata.title }}{{ page.url | htmlBaseUrl }}</h1>
-				
-				<ul>
-					{%- for entry in collections.all | eleventyNavigation %}
-						<li class="item">
-							<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>
-								{{ entry.title }}
-							</a>
-						</li>
-					{%- endfor %}
-				</ul>
-			<section id="fediring">
-		      <nav class="fedi">
-		        <a class="material-symbols-outlined" href="https://fediring.net/previous?host=amycatgirl.codeberg.page">arrow_back</a>
-		        <a href="https://fediring.net/">Fediring</a>
-		        <a class="material-symbols-outlined" href="https://fediring.net/next?host=amycatgirl.codeberg.page">arrow_forward</a>
-		      </nav>
-		    </section>
-		  </nav>
-
-		  <hr />
-		</header>
+		<nav>
+			<h1>Amy</h1>
+			{%- for entry in collections.all | eleventyNavigation %}
+				<a href="{{entry.url}}">
+					{{ entry.title }}
+				</a>
+			{%- endfor %}
+		</nav>	
 
 		<main id="skip">
 			{{ content | safe }}
 		</main>
 
-		<footer>
-			<hr />
-	    	<p>
-				<button class="cat" title="Enable Dynamic Theme Devtools">
-        			<p id="animate">🐈</p>
-	    		</button>
-				<span id="copyright">Amy (copyright {{ currentYear }}, licensed under the MIT License)</span>
-			</p>
-		    <div class="target">
-		      <input type="color" id="picker">
-		      <p>accent</p></input>
-		      <div id="base">base</div>
-		      <div id="text">text</div>
-		      <div id="text-emphasis">emphasis</div>
-		    </div>
-		    <div class="links">
-		      <p>
-		        <a rel="me" target="_blank" href="https://lea.pet/@amy">Fedi</a>
-		        · <a target="_blank" href="https://lemmy.blahaj.zone/u/amycatgirl">Lemmy</a>
-		        · <a target="_blank" href="https://codeberg.org/amycatgirl">Codeberg</a>
-		        · <a target="_blank" href="https://github.com/amycatgirl">Github</a>
-		        · <a href="/license">Licenses</a>
-		      </p>
-		    </div>
-		</footer>
-
-		<script defer>
-			/**
-				@licstart
-				Copyright © {{ currentYear }} Amy Pérez
-
-				Permission is hereby granted, free of charge, to any person obtaining a copy of this software
-				and associated documentation files (the “Software”), to deal in the Software without restriction,
-				including without limitation the rights to use, copy, modify, merge, publish, distribute,
-				sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
-				furnished to do so, subject to the following conditions:
-
-				The above copyright notice and this permission notice shall be included in all copies or substantial
-				portions of the Software.
-
-				THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-				BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-				IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-				WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-				SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-				if nuclear war ever happens i am not responsible for that, unless
-				@licend
-			*/
-
-		  const catButton = document.querySelector(".cat");
-		  const target = document.querySelector(".target");
-		  const copyright = document.querySelector("#copyright");
-
-		  const colourInput = document.querySelector("#picker");
-		  const root = document.querySelector(":root");
-		  const themeColor = document.querySelector("meta[name='theme-color']");
-
-		  function animateElement(target, name, duration, easing) {
-		    if (!name || !target) throw "Missing arguments";
-
-		    const element = document.querySelector("#" + target);
-		    element.style.setProperty("animation-name", name);
-		    element.style.setProperty("animation-duration", `${duration}ms`);
-		    element.style.setProperty("animation-timing-function", easing);
-		    element.style.setProperty("animation-fill-mode", "forwards");
-
-		    setTimeout(() => {
-		      element.style.removeProperty("animation-name");
-		      element.style.removeProperty("animation-duration");
-		      element.style.removeProperty("animation-timing-function");
-		      element.style.removeProperty("animation-fill-mode");
-		    }, duration);
-		  }
-
-		  catButton.addEventListener("click", (ev) => {
-		    animateElement("animate", "bounce", 300, "ease-in-out");
-		    target.style.setProperty("display", "flex");
-		    copyright.style.setProperty("display", "none");
-		  });
-
-		  colourInput.value = "#ff339d";
-		  themeColor.content = "#ff339d";
-
-
-		  colourInput.addEventListener("change", (ev) => {
-		    root.style.setProperty("--accent", ev.currentTarget.value);
-		    themeColor.content = root.style.getPropertyValue("--accent")
-		  })
-
-		</script>
-
-		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+				<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
 </html>

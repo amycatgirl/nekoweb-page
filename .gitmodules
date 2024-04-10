@@ -1,4 +1,0 @@
-[submodule "_site"]
-	path = _site
-	url = git@codeberg.org:amycatgirl/pages
-	branch = pages

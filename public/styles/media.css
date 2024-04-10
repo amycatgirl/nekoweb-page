@@ -1,0 +1,73 @@
+div.media {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: end;
+}
+
+div.media div > :is(h2, a) {
+    color: #fff !important;
+}
+
+div.media > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: .5rem;
+}
+
+div.media div > a {
+    display: inline-block;
+
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 10px;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.media.mastodon {
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/mastodon.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.media.pixelfed {
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/pixelfed.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.media.revolt {
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/revolt.png");
+    background-size: cover;
+    background-position: top;
+}
+
+.media.mastodon a {
+    background-color: #6364FF;
+}
+
+.media.pixelfed a {
+    background-color: #4044ee;
+}
+
+.media.revolt a {
+    background-color: rgb(138, 51, 51);
+}
+
+@media screen and (max-width: 365px) {
+    div.media > div {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: normal;
+    }
+
+    div.media div > a {
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,67 @@
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    transition: all 100ms ease-in-out;
+}
+
+header > div.actions {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+header > div.actions a {
+    font-size: 1.7em;
+}
+
+header > h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.card {
+    display: block;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card.latest {
+    background-color: #FFCAE7;
+    border-radius: 25px;
+}
+
+.card.older {
+    background-color: #FFB8DF;
+    border-radius: 10px;
+}
+
+.card h4 {
+    font-size: 3em;
+
+    text-wrap: pretty;
+}
+
+.card p:not(.metadata) {
+    font-style: italic;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 580px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    header > div.actions {
+        margin-left: unset;
+    }
+}

@@ -1,40 +1,26 @@
 ---
 layout: layouts/base.njk
 ---
+<link rel="stylesheet" href="/styles/tag.css">
+<link rel="stylesheet" href="/styles/wrapper.css">
+<link rel="stylesheet" href="/styles/article.css">
+<script defer src="/scripts/randomTagColours.js"></script>
 {# Only include the syntax highlighter CSS on blog posts #}
-{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
-{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
-<h1>{{ title }}</h1>
-
-<section class="metadata">
-	<p>
-		<span class="material-symbols-outlined">article</span>
-		Written:
-		<time datetime="{{ page.date | htmlDateString }}">
-			{{ page.date | readableDate }}
-		</time>
-	</p>
-	{% if updated %}
-		<p>
-			<span class="material-symbols-outlined">edit</span>
-			Last Updated:
-			<time datetime="{{ updated | htmlDateString }}">
-				{{updated | readableDate}}
-			</time>
-		</p>
-	{% endif %}
-	{% if tags | filterTagList | length %}
-		<p>
-			<span class="material-symbols-outlined">sell</span>
-			{%- for tag in tags | filterTagList %}
-			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-			<a href="{{ tagUrl }}" class="tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
-			{%- endfor %}
-		</p>
-	{% endif %}
-</section>
-
 <article>
+<header>
+	<h2>{{title}}</h2>
+	<div class="metadata">
+		<span>Published on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></span>
+		{% if tags | filterTagList | length %}
+			<div class="wrapper">
+				{%- for tag in tags | filterTagList %}
+					{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+					<a href="{{ tagUrl }}" class="tag">#{{ tag }}</a>
+				{%- endfor %}
+			</div>
+		{% endif %}
+	</div>
+</header>
   {{ content | safe }}
 </article>
 

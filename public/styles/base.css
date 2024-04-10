@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+    /* Colour Palette */
+    --colour-accent: #FA1BFF;
+    --colour-background: #fff2fb;
+    --colour-foreground: #4F2147;
+    --colour-emphasis: #1D0C1A;
+    --colour-navigation: #58435B;
+    --colour-disabled: #72547C;
+    --colour-container-bright: #ffd3eb;
+    --colour-container-unimportant: #ffc0e3;
+
+    --colour-disabled-rgb: 114, 84, 124;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--colour-background);
+    color: var(--colour-foreground);
+    font-family: "IBM Plex Sans", "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+    gap: 30px;
+}
+
+:is(main, nav) {
+    max-width: 35rem;
+    width: 100%;
+    transition: 100ms ease-in-out;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+:is(h1,h2,h3,h4,h5,h6), nav > a:not(.material-symbols-outlined) {
+    font-family: "Inter", sans-serif;
+}
+
+:is(a, a:visited):not(.material-symbols-outlined, nav > a, .tag, a.card) {
+    color: var(--colour-disabled);
+    font-weight: 500;
+}
+
+:is(a, a:visited).material-symbols-outlined,
+:is(a, a:visited).card {
+    color: inherit;
+}
+
+:is(a, a:visited).card {
+    text-decoration: none;
+}
+
+:is(h1,h2,h3,h4,h5,h6,p) {
+    margin: 0 !important;
+}
+
+:is(h1,h2) {
+    margin: 1rem 0;
+    font-size: 2.5em;
+    color: var(--colour-emphasis)
+}
+
+h3 {
+    font-size: 2em;
+}
+
+:is(h4,h5,h6) {
+    font-size: 1.7em;
+}
+
+nav:not(.miniNav) {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+nav:not(.miniNav) h1 {
+    color: var(--colour-foreground);
+    font-size: 2em;
+    margin: 0;
+}
+
+nav:not(.miniNav) :is(a, a:visited) {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--colour-navigation);
+}
+
+p {
+    font-size: 1.3em;
+}
+
+.outlined {
+    border: 1px solid var(--colour-emphasis)
+}
+
+/* Prevent users from selecting symbols/icons */
+
+.material-symbols-outlined {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 580px) {
+    :is(main, nav) {
+        max-width: unset;
+        width: 80%;
+    }
+
+    nav {
+        padding: 0 3rem;
+    }
+}
+
+div.image {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    width: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+div.image p {
+    font-size: .8em;
+    color: var(--colour-disabled);
+}
+
+div.image :is(a, a:visited) {
+    color: var(--colour-disabled);
+    font-weight: 600;
+}
+
+.visually-hidden:not(:focus):not(:focus-within) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.visually-hidden:is(:focus):is(:focus-within) {
+    background: transparent;
+    color: var(--colour-emphasis);
+    border: 2px dashed var(--colour-emphasis);
+    border-radius: 50px;
+    padding: 10px 35px;
+
+    font-weight: 500;
+    text-decoration: none;
+
+    width: fit-content;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}

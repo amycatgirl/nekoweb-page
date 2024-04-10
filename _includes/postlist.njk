@@ -1,24 +1,17 @@
-	<div reversed class="list">
-	{% for post in postslist | reverse %}
-			<h3 class="title">
-				{% if post.data.tags and "needs-proofreading" in post.data.tags %}
-					<span class="material-symbols-outlined needsProofreading" title="This article needs proofreading, please your send feedback to @amycatgirl@wetdry.world">
-						warning
-					</span>
-				{% endif %}
-				<code>
-					<time class="date" datetime="{{ post.date | htmlDateString }}">
-						{{ post.date | readableDate("LLLL yyyy") }}
-					</time>
-				</code>
-				<a href="{{ post.url }}">
-					{{ post.data.title or post.url }}
-				</a>
-			</h3>
-			{% if post.data.description %}
-				<p>
-					{{post.data.description}}
-				</p>
-			{% endif %}
-	{% endfor %}
-	</div>
+{% for post in postslist | reverse %}
+	<a class="card latest" href="{{ post.url }}">
+		<h4>{{ post.data.title or post.url }}</h4>
+		{% if post.data.description %}
+			<p>
+				{{post.data.description}}
+			</p>
+		{% endif %}
+		<div class="metadata">
+			<span>
+				<time class="date" datetime="{{ post.date | htmlDateString }}">
+				{{ post.date | readableDate("LLLL yyyy") }}
+				</time>
+			</span>
+		</div>
+	</a>
+{% endfor %}

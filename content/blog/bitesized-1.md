@@ -4,7 +4,7 @@ title: "Bite-sized bytes: Clouds of a blue sky"
 description: "An introduction to Bite-sized bytes, articles that are too small but not that big."
 
 date: 2023-12-26
-tags: ["bitesizedbytes", "bsky", "nix", "pixel", "google", "biweekly", "needs-proofreading"]
+tags: ["bitesizedbytes", "bsky", "nix", "pixel", "google", "biweekly"]
 ---
 
 ## Introduction

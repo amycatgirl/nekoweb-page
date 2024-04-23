@@ -17,7 +17,7 @@ permalink: /tags/{{ tag | slugify }}/
 <link rel="stylesheet" href="/styles/tag.css">
 <script defer src="/scripts/randomTagColours.js"></script>
 
-<h1 style="display: inline-flex; gap: 1rem; align-items: center;">Tagged <a class="tag">#{{ tag }}</a></h1>
+<h2 style="display: inline-flex; gap: 1rem; align-items: center;">Tagged <a class="tag">#{{ tag }}</a></h2>
 
 {% set postslist = collections[ tag ] %}
 {% include "postlist.njk" %}

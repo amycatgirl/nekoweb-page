@@ -1,11 +1,11 @@
 module.exports = {
-	title: "amycatgirl",
-	url: "https://amycatgirl.codeberg.page/",
+	title: "Amy's Website",
+	url: "https://amycatgirl.nekoweb.org/",
 	language: "en-GB",
 	description: "Developer, designer and full-time catgirl",
 	author: {
 		name: "Amy Perez",
-		email: "amycatgirlnya@example.com",
-		url: "https://amycatgirl.codeberg.page"
+		email: "amy@amogus.cloud",
+		url: "https://amycatgirl.nekoweb.org"
 	}
 }

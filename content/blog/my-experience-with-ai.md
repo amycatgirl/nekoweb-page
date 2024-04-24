@@ -1,7 +1,7 @@
 ---
 title: My experience with Large Language Models
 date: 2024-04-24
-description: A draft, originally written as a practice for IB's External assessment, about my experience with Artificial Intelligence and one of the multiple ethical issues
+description: A draft, originally written as a practice for IB's External assessment, about my experience with Artificial Intelligence, and one of the multiple ethical issues
 tags:
   - ib
   - external-assessment
@@ -21,34 +21,34 @@ But what if I told you that we are not quite on the AI era? Or that AI will not 
 
 Well, we might not be there just yet, and it might seem that it's progressing at a rather alarming rate, but in reality, we are really far from the concept of a fully automated, accurate and efficient AI.
 
-With this article, I want to talk a little bit about LLMs (or Large Language Models), My experience with them, as a Student and frontend developer, and their impact that they have on our world.
+With this article, I want to talk a little bit about LLMs (or Large Language Models), my experience with them, as a student and frontend developer, and their impact that they have on our world.
 
 ## What is an AI?
-An AI model, at it's core, is a big neural network, trained using hundreds, thousands, heck even millions of tokens. From what I understand, tokens are basically words; Whenever you see a model with a number and a letter as it's suffix, it usually means the amount of "tokens" that they've been trained on. These models are trained using rewards, like we use treats to tell our dogs what's good or bad. What I mean by this is that, these models "try" to predict which response out of a given prompt gives out the most results (aka. the best result). This process is called re-enforcement training  and it's the most widely used training method used in AI models.
+An AI model, at its core, is a big neural network, trained using hundreds, thousands, heck even millions of tokens. From what I understand, tokens are basically words; whenever you see a model with a number and a letter as it's suffix, it usually means the amount of "tokens" that they've been trained on. These models are trained using rewards, like we use treats to tell our dogs what's good or bad. What I mean by this is that, these models "try" to predict which response out of a given prompt gives out the most results (aka. the best result). This process is called re-enforcement training  and it's the most widely used training method used in AI models.
 
 Now that you probably have, at the very least, a better grasp of what I am talking about, and how it works, I'll talk about my overall experience with Gemini/Bard, Google's "magnum opus" on the current AI arms race.
 
 ## My experience with Gemini
 If I could summarise my experience with Gemini in a singular word, it would be "clueless".
 
-Why clueless? You may ask.
+"Why clueless?" You may ask.
 
 I say clueless because, most of the time, you have to use it's double check feature to make sure it doesn't hallucinate, other times, it would tell you that it doesn't know the answer to the question.
 
-You might say that the questions that I've asked the model were "Too complex" or "Too recent". But nope, they weren't either complex, nor recent. In fact, I asked about Nicolas the Ovando's life, which was a governor on la Hispaniola (which if you didn't know, is the name of our island), and the model replied with:
+You might say that the questions that I've asked the model were "too complex" or "too recent". But nope, they were neither complex nor recent. > In fact, I asked about the life of a previous governor on la Hispaniola (which if you didn't know, is the name of our island), Nicolas de Ovando, and the model replied with:
 
 > "I don't know the answer to the question yet"
 >
 > - Gemini
 
-Afterwards, I was able to look up the answer to the question I've had in like, no time at all.
+Afterwards, I was able to look up the answer> to the question I had in like, no time at all.
 
-Another example would be generating code, more specifically, Kotlin code. I asked about Kotlin naming schemes, as I didn't understand how to name files. It took me about 3 to 4 separate prompts to get an answer I could understand and apply to my code.
+Another example would be generating code, specifically Kotlin. I asked about Kotlin naming schemes, as I didn't understand how to name files. It took me about 3 to 4 separate prompts to get an answer I could understand and apply to my code.
 
 ## General thoughts
 Whilst I do understand that AI models are in continuous development, and that they will get better as time goes on, I think it's wrong to advertise them as such. As artificial intelligence, I mean.
 
-This might seem like I am downplaying the efforts of countless bright minds behind this amazingly complex invention, but I personally thing that they are nothing but fancy and expensive prediction machines. Mostly because they are really good at recognising patterns and predicting what should go next, after all, that's how they choose responses.
+This might seem like I am downplaying the efforts of countless bright minds behind this amazingly complex invention, but I personally think that they are nothing but fancy and expensive prediction machines. Mostly because they are really good at recognising patterns and predicting what should go next; after all, that's how they choose responses.
 
 ## Ethical issues
 To conclude, let's talk about ethical issues with AI.

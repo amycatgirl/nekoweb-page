@@ -1,6 +1,6 @@
 ---
 title: My experience with Large Language Models
-date: 2024-04-10
+date: 2024-04-24
 description: A draft, originally written as a practice for IB's External assessment, about my experience with Artificial Intelligence and one of the multiple ethical issues
 tags:
   - ib

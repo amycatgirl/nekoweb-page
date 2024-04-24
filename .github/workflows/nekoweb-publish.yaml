@@ -1,0 +1,19 @@
+name: "Publish to Nekoweb"
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-and-publish:
+        environment: Nekoweb
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Setup python
+              uses: actions/setup-python@v5
+            - name: Run publishing script
+              run: python3 nekopublish.py
+            

@@ -7,6 +7,6 @@ tags:
   - python
 ---
 
-If you see this post, then it means that both my python publishing script and the related github action work as intended!
+If you see this post, then it means that both my python publishing script and the related github action work as intended! 
 
 You can check both out [here](https://github.com/amycatgirl/nekoweb-page)

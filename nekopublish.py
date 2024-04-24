@@ -3,6 +3,10 @@ from os import path, _exit, remove, environ
 from shutil import make_archive
 import requests
 
+if (environ["NKWEB_API_TOKEN"] is None):
+    print("Fill in the env var NKWEB_API_TOKEN...")
+    _exit(1)
+
 api_root = "https://nekoweb.org/api"
 
 headers = {
@@ -20,7 +24,8 @@ pnpm_exists = check_if_exists("pnpm --version")
 if not node_exists and not pnpm_exists:
     print("NodeJS and PNPM are missing from this system.")
     _exit(1)
-    
+
+print("Building...")
 run('pnpm run build', shell=True)
 
 if path.exists("./website-archive.zip"):

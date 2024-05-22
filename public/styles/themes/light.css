@@ -1,0 +1,15 @@
+@media screen and (prefers-color-scheme: light) {
+	:root {
+		/* Colour Palette */
+		--colour-accent: #FA1BFF;
+		--colour-background: #fff2fb;
+		--colour-foreground: #4F2147;
+		--colour-emphasis: #1D0C1A;
+		--colour-navigation: #58435B;
+		--colour-disabled: #72547C;
+		--colour-container-first: #ba7087;
+		--colour-container-others: #de99b7;
+
+		--colour-disabled-rgb: 114, 84, 124;
+	}
+}

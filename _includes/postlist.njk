@@ -12,7 +12,7 @@
 				{{ post.date | readableDate("LLLL yyyy") }}
 				</time>
 			</span>
-			{% for tag in post.data.tags | listNthTags %}
+			{% for tag in post.data.tags | filterTagList | listNthTags %}
 				<span>{{tag}}</span>
 			{% endfor %}
 		</div>

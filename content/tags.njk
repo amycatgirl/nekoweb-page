@@ -14,7 +14,10 @@ eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag | slugify }}/
 ---
+<link rel="stylesheet" href="/styles/blog.css">
+<link rel="stylesheet" href="/styles/wrapper.css">
 <link rel="stylesheet" href="/styles/tag.css">
+
 <script defer src="/scripts/randomTagColours.js"></script>
 
 <h2 style="display: inline-flex; gap: 1rem; align-items: center;">Tagged <a class="tag">#{{ tag }}</a></h2>

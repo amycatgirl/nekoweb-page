@@ -54,7 +54,7 @@ header > h2 {
 }
 
 .card div.metadata span {
-    padding: 5px 7px;
+    padding: 7px;
     border-radius: 50000px;
     border: 1px solid rgba(var(--colour-disabled-rgb), .2);
 }

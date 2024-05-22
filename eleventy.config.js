@@ -90,8 +90,12 @@ module.exports = function (eleventyConfig) {
       if (index > max) overflowed++
     })
 
-    const result = (tags || []).map((tag) => `#${tag}`).filter((_value, index) => index < max);
-    if (overflowed > 0) result.push(`${overflowed}+`);
+    let result = (tags || []).map((tag) => `#${tag}`);
+    if (overflowed > 0) {
+      result = result.filter((_value, index) => index < max);
+      result.push(`${overflowed}+`);
+
+    }
 
     console.log(result)
     return result

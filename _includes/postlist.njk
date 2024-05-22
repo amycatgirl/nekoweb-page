@@ -6,12 +6,15 @@
 				{{post.data.description}}
 			</p>
 		{% endif %}
-		<div class="metadata">
+		<div class="metadata wrapper">
 			<span>
 				<time class="date" datetime="{{ post.date | htmlDateString }}">
 				{{ post.date | readableDate("LLLL yyyy") }}
 				</time>
 			</span>
+			{% for tag in post.data.tags | listNthTags %}
+				<span>{{tag}}</span>
+			{% endfor %}
 		</div>
 	</a>
 {% endfor %}

@@ -70,8 +70,8 @@ module.exports = function (eleventyConfig) {
 
   // Return all the tags used in a collection
   eleventyConfig.addFilter("getAllTags", (collection) => {
-    let tagSet = new Set();
-    for (let item of collection) {
+    const tagSet = new Set();
+    for (const item of collection) {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     }
     return Array.from(tagSet);
@@ -82,6 +82,20 @@ module.exports = function (eleventyConfig) {
       (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1,
     );
   });
+
+  eleventyConfig.addFilter("listNthTags", (tags) => {
+    const max = 3;
+    let overflowed = 0; 
+    (tags || []).forEach((_value, index) => {
+      if (index > max) overflowed++
+    })
+
+    const result = (tags || []).map((tag) => `#${tag}`).filter((_value, index) => index < max);
+    if (overflowed > 0) result.push(`${overflowed}+`);
+
+    console.log(result)
+    return result
+  })
 
   // Customize Markdown library settings:
   eleventyConfig.amendLibrary("md", (mdLib) => {

@@ -27,12 +27,12 @@ header > h2 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border: 1px solid #de99b7;
+    border: 1px solid var(--colour-container-others);
     border-radius: 25px;
 }
 
 .card:first-of-type {
-    border: 2px solid #ba7087;
+    border: 2px solid var(--colour-container-first);
 }
 
 .card h3 {
@@ -46,6 +46,17 @@ header > h2 {
 .card img {
     width: 100%;
     object-fit: cover;
+}
+
+.card div.metadata {
+    font-weight: 300;
+    font-family: monospace;
+}
+
+.card div.metadata span {
+    padding: 5px 7px;
+    border-radius: 50000px;
+    border: 1px solid rgba(var(--colour-disabled-rgb), .2);
 }
 
 @media screen and (max-width: 580px) {

@@ -24,8 +24,8 @@ h1 {
 
 h1 span {
     font-size: inherit !important;
-    background-color: #9c6a00;
-    color: white;
+    background-color: var(--colour-accent);
+    color: var(--colour-background);
     padding: 3px;
     
     border-radius: 10px;
@@ -33,8 +33,11 @@ h1 span {
 
 h2 {
     text-decoration: underline;
+    margin-bottom: .5rem !important;
 }
 
 p {
     text-wrap: pretty;
+    font-weight: 300;
+    margin-bottom: .5rem !important;
 }

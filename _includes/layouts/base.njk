@@ -20,16 +20,18 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-		<meta property="og:title" content="{{ title or metadata.title }}" />
-		<meta property="og:locale" content="{{ metadata.language }}" />
-		<meta property="og:description" content="{{ description or metadata.description }}" />
-		<meta property="og:url" content="{{ metadata.author.url }}{{ page.url }}" />
-		<meta property="og:site_name" content="{{ metadata.title }}" />
-		<meta property="og:type" content="website" />
-		<meta name="twitter:card" content="summary"></meta>
-
+		<meta property="og:title" content="{{ title or metadata.title }}">
+		<meta property="og:locale" content="{{ metadata.language }}">
+		<meta property="og:description" content="{{ description or metadata.description }}">
+		<meta property="og:url" content="{{ metadata.author.url }}{{ page.url }}">
+		<meta property="og:site_name" content="{{ metadata.title }}">
+		<meta property="og:type" content="website">
+		<meta name="twitter:card" content="summary">
 		<!-- Link tag -->
 		<link rel="me" href="https://wetdry.world/@amycatgirl"/>
+
+		<!-- Favicon! -->
+		<link rel="icon" type="image/png" href="/assets/favicon.png"/>
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>

@@ -27,21 +27,15 @@ header > h2 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.card.latest {
-    background-color: #FFCAE7;
+    border: 1px solid #de99b7;
     border-radius: 25px;
 }
 
-.card.older {
-    background-color: #FFB8DF;
-    border-radius: 10px;
+.card:first-of-type {
+    border: 2px solid #ba7087;
 }
 
-.card h4 {
-    font-size: 3em;
-
+.card h3 {
     text-wrap: pretty;
 }
 

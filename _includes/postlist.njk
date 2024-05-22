@@ -1,6 +1,6 @@
 {% for post in postslist | reverse %}
 	<a class="card latest" href="{{ post.url }}">
-		<h4>{{ post.data.title or post.url }}</h4>
+		<h3>{{ post.data.title or post.url }}</h3>
 		{% if post.data.description %}
 			<p>
 				{{post.data.description}}

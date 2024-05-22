@@ -28,3 +28,30 @@ a.tag {
 .purple {
     background-color: #EDA5FF55;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    a.tag {
+        color: var(--colour-background);
+        border: 2px solid transparent;
+    }
+
+    .red {
+        background-color: #FFA9A9;
+    }
+
+    .green {
+        background-color: #BDFFB7;
+    }
+
+    .blue {
+        background-color: #A7B0FF;
+    }
+
+    .orange {
+        background-color: #FFDF8D;
+    }
+
+    .purple {
+        background-color: #EDA5FF;
+    }
+}

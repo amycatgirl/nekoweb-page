@@ -96,8 +96,6 @@ module.exports = function (eleventyConfig) {
       result.push(`${overflowed}+`);
 
     }
-
-    console.log(result)
     return result
   })
 

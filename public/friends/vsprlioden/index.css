@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+
+body {
+	background: url('https://amycatgirl.nekoweb.page/friends/vsprlioden/bg.png') center center fixed;
+	background-size: 100%;
+	font-family: 'Marcellus', serif;
+	color: #3C302C;
+}
+
+.topbar {
+	background: #88724C;
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	font-family: 'Fondamento', cursive;
+	color: #3C2C24;
+}
+
+.navbar {
+	background: #88724C;
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	color: #3C2C24;
+}
+
+.navbar li a {
+	color: #3C2C24 !important;
+}
+
+.navbar li a:hover {
+	transition: .5s !important;
+	color: #4f2c37;
+	border-radius: 25px;
+	background: none !important;
+	text-shadow: 0 0 5px #C4D4D4 !important;
+}
+
+.container.main {
+	background: rgba(212, 212, 212, 0.5);
+	border: 3px double color #3f3a35;
+	box-shadow: none;
+	border-radius: 10px;
+}
+
+.col-md-9 {
+	background: rgba(212, 212, 212, 0.1);
+	border-right: none;
+}
+
+div.center.xlarge {
+	font-size: 28px !important;
+}
+
+.breadcrumb {
+	background: #88724C;
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	font-family: 'Fondamento', cursive;
+	color: #3C2C24;
+}
+
+.breadcrumb .active {
+	color: #3C2C24;
+}
+
+.alert {
+	background: rgba(167, 167, 167);
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	font-family: 'Fondamento', cursive;
+	color: #3C2C24;
+}
+
+.alert-warning,
+.alert-danger {
+	background: rgba(167, 167, 167);
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	font-family: 'Fondamento', cursive;
+	color: #3C2C24;
+}
+
+.feature,
+div.left {
+	background: rgba(172, 148, 124, 0.9) !important;
+	color: #14100E;
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+}
+
+div.left h3 {
+	color: #3C2C24;
+}
+
+.panel {
+	background: #88724C;
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	color: #3C2C24;
+}
+
+.progress {
+	background: #C4D4D4;
+	color: #3C2C24;
+	border-radius: 10px !important;
+}
+
+.progress-bar {
+	background: #4D5D6C;
+	color: #3C2C24;
+	border-radius: 10px !important;
+}
+
+.progress div {
+	color: #3C302C;
+}
+
+h1 {
+	color: #3C2C24 !important;
+	font-size: 80px;
+	text-align: center;
+	text-shadow: 0 0 5px #C4D4D4 !important;
+	font-family: 'Fondamento', cursive;
+}
+
+h2 {
+	color: #3C2C24 !important;
+	font-size: 24px;
+	text-align: center;
+	text-shadow: 0 0 5px #C4D4D4 !important;
+	font-family: 'Fondamento', cursive;
+}
+
+h3 {
+	color: #3C2C24 !important;
+	font-size: 18px !important;
+	text-shadow: 0 0 5px #C4D4D4 !important;
+	font-family: 'Fondamento', cursive;
+}
+
+h4 {
+	color: #3C2C24 !important;
+	font-size: 16px !important;
+	text-shadow: 0 0 5px #C4D4D4 !important;
+	font-family: 'Merriweather', serif !important;
+}
+
+h5 {
+	color: #3C2C24 !important;
+	font-size: 13px !important;
+	text-shadow: 0 0 5px #C4D4D4 !important;
+	font-family: 'Fondamento', cursive;
+}
+
+.sidebar h3 {
+	color: #3C2C24 !important;
+	font-size: 25px !important;
+	text-shadow: 0 0 5px #C4D4D4 !important;
+	font-family: 'Fondamento', cursive;
+}
+
+.table {
+	background: #88724C;
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	color: #3C2C24 !important;
+}
+
+.top,
+.bottom,
+th {
+	background: #584D3D !important;
+	color: #3C2C24 !important;
+	border-radius: 10px;
+}
+
+td.bottom a {
+	text-decoration: none !important;
+	color: #3C2C24 !important;
+}
+
+div.xlarge.b a {
+	color: #3C2C24 !important;
+}
+
+td.bottom a {
+	color: #3C2C24 !important;
+}
+
+.table .left {
+	background: #584D3D !important;
+	color: #3C2C24 !important;
+	border-radius: 0px;
+}
+
+input,
+select,
+textarea {
+	background: #88724C;
+	border: 1px solid #3C2C24;
+	border-radius: 10px;
+	color: #3C2C24;
+}
+
+.inner-table .left {
+	background: #584D3D !important;
+	color: #3C2C24 !important;
+	border-radius: 0px;
+}
+
+.inner-table .right {
+	background: #c3b2a6 !important;
+	color: #3C2C24 !important;
+	border-radius: 0px;
+}
+
+.right_odd {
+	background: none !important;
+}
+
+.item-header {
+	background: #88724C !important;
+	color: #3C2C24;
+	border-radius: 10px !important;
+	font-size: 16px;
+}
+
+.item {
+	color: #3C2C24;
+	border-radius: 10px !important;
+}
+
+a:link,
+a:visited {
+	color: #3C2C24 !important;
+}
+
+div#lion_image {
+	border-radius: 50% !important;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+table#player img {
+	border-radius: 50% !important;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
+	content: url('https://i.imgur.com/WI2DSFM.png');
+	height: 120px !important;
+	width: 120px !important;
+}
+
+.breadcrumb::after {
+	content: "CSS adapted by Amy (amycatgirl on IRC). Originally by LoveIss [#313293]";
+	color: #3C2C24;
+	position: absolute;
+	right: 13%;
+	z-index: 100;
+}
+
+.lioden-container {
+	background-color: #C7A360;
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.lioden-container.fancy {
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: solid 5px #855123;
+}
+
+.lioden-container ul {
+	padding: 0 0;
+}
+
+.lioden-container h1 {
+	margin-bottom: 2rem;
+	font-size: 3em;
+}
+
+.lioden-container .col {
+	display: flex;
+	flex-direction: column;
+}
+
+.lioden-container .centre {
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.lioden-container .row {
+	display: flex;
+	flex-direction: row;
+}
+
+.lioden-container .half-w {
+	max-width: 50%;
+	width: 100%;
+}
+
+.lioden-container .text-centre {
+	text-align: center;
+}
+
+.lioden-container .bold {
+	font-weight: bold;
+}

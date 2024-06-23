@@ -28,7 +28,6 @@ header > h2 {
     flex-direction: column;
     gap: 15px;
     border: 1px solid var(--colour-container-others);
-    border-radius: 25px;
 }
 
 .card:first-of-type {

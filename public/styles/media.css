@@ -22,7 +22,6 @@ div.media div > a {
 
     margin-left: auto;
     padding: 10px;
-    border-radius: 10px;
 
     font-family: "Inter", sans-serif;
     font-weight: 600;
@@ -57,6 +56,10 @@ div.media div > a {
 
 .media.matrix a {
     background-color: #000;
+}
+
+.buttons img {
+    image-rendering: pixelated;
 }
 
 @media screen and (max-width: 365px) {

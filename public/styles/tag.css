@@ -1,6 +1,5 @@
 a.tag {
     border: 2px solid var(--colour-emphasis);
-    border-radius: 8px;
     padding: 5px;
 
     text-decoration: none;

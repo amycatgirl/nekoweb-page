@@ -2,9 +2,9 @@
 	:root {
 		/* Colour Palette */
 		--colour-accent: #FA1BFF;
-		--colour-background: #fff2fb;
-		--colour-foreground: #4F2147;
-		--colour-emphasis: #1D0C1A;
+		--colour-background: #ffd0f1;
+		--colour-foreground: #1f171d;
+		--colour-emphasis: #000000;
 		--colour-navigation: #58435B;
 		--colour-disabled: #72547C;
 		--colour-container-first: #ba7087;

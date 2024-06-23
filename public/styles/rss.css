@@ -27,8 +27,6 @@ h1 span {
     background-color: var(--colour-accent);
     color: var(--colour-background);
     padding: 3px;
-    
-    border-radius: 10px;
 }
 
 h2 {

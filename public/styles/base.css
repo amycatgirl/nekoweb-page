@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url("/fonts/cozzette/cozzette.css");
 @import url("./themes/light.css");
 @import url("./themes/dark.css");
 
@@ -147,7 +148,6 @@ div.image :is(a, a:visited) {
     background: transparent;
     color: var(--colour-emphasis);
     border: 2px dashed var(--colour-emphasis);
-    border-radius: 50px;
     padding: 10px 35px;
 
     font-weight: 500;
@@ -159,4 +159,113 @@ div.image :is(a, a:visited) {
     align-items: center;
     justify-content: center;
     outline: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+footer :is(p) {
+    font-family: Cozzette;
+    font-size: 15px;
+    line-height: 1;
+}
+
+footer .copyright {
+    display: inline-flex;
+
+    border: 1px solid black;
+    border-top: 0 !important;
+    background-color: #ff7598;
+    color: black;
+
+    padding: 2px;
+}
+
+footer .copyright :is(a, a:visited) {
+    color: black;
+}
+
+footer .copyright .icons {
+    display: inline-flex;
+
+    gap: 2px;
+
+    margin-left: auto;
+    margin-right: 3px;
+}
+
+footer .ring {
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    --colour-1: #e4e4e4;
+    --colour-2: #d3d3d3;
+
+    background-image: linear-gradient(
+        to bottom,
+        var(--colour-1) 0%,
+        var(--colour-1) 50%,
+        var(--colour-2) 50%,
+        var(--colour-2) 100%
+    );
+    clip-path: polygon(0 0, 97.6% 0, 100% 100%, 0% 100%);
+    gap: 0;
+
+    z-index: 2;
+}
+
+footer .ring > p {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1b0b13;
+    padding: 2px;
+}
+
+footer .ring > p :is(a, a:visited) {
+    color: #1b0b13;
+}
+
+footer .ring > .controls {
+    display: flex;
+    margin-left: auto;
+}
+
+footer .ring > .controls > a {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer .ring > .controls > a button {
+    width: 2rem;
+    height: 100%;
+    border: none;
+
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 50% 100%);
+    cursor: pointer;
+
+    padding: 0;
+    margin: 0;
+}
+
+footer .ring > .controls > a button {
+    --colour-1: #fcd2ee;
+    --colour-2: #ffafca;
+
+    background-image: linear-gradient(
+        to bottom,
+        var(--colour-1) 0%,
+        var(--colour-1) 50%,
+        var(--colour-2) 50%,
+        var(--colour-2) 100%
+    );
 }

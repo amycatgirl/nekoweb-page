@@ -1,0 +1,7 @@
+@font-face {
+	font-family: Cozzette;
+	font-style: normal;
+	font-weight: 400;
+	src: local("CozzetteVector"), url(/fonts/cozzette/CozzetteVector.ttf) format("ttf");
+	font-display: swap;
+}

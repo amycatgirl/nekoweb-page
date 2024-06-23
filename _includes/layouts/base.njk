@@ -1,54 +1,78 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
-		<meta name="theme-color" content="#ff339d" />
 
-		{#- Atom and JSON feeds included by default #}
-		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title or metadata.title }}</title>
+	<meta name="description" content="{{ description or metadata.description }}">
+	<meta name="theme-color" content="#ff339d" />
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		<meta name="generator" content="{{ eleventy.generator }}">
+	{#- Atom and JSON feeds included by default #}
+	<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+	<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
-		<link rel="stylesheet" href="/styles/base.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site! #}
+	<meta name="generator" content="{{ eleventy.generator }}">
 
-		<meta property="og:title" content="{{ title or metadata.title }}">
-		<meta property="og:locale" content="{{ metadata.language }}">
-		<meta property="og:description" content="{{ description or metadata.description }}">
-		<meta property="og:url" content="{{ metadata.author.url }}{{ page.url }}">
-		<meta property="og:site_name" content="{{ metadata.title }}">
-		<meta property="og:type" content="website">
-		<meta name="twitter:card" content="summary">
-		<!-- Link tag -->
-		<link rel="me" href="https://wetdry.world/@amycatgirl"/>
+	<link rel="stylesheet" href="/styles/base.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-		<!-- Favicon! -->
-		<link rel="icon" type="image/png" href="/assets/favicon.png"/>
-	</head>
-	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+	<meta property="og:title" content="{{ title or metadata.title }}">
+	<meta property="og:locale" content="{{ metadata.language }}">
+	<meta property="og:description" content="{{ description or metadata.description }}">
+	<meta property="og:url" content="{{ metadata.author.url }}{{ page.url }}">
+	<meta property="og:site_name" content="{{ metadata.title }}">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary">
+	<!-- Link tag -->
+	<link rel="me" href="https://wetdry.world/@amycatgirl" />
 
-		<nav>
-			<h1>Amy</h1>
-			{%- for entry in collections.all | eleventyNavigation %}
-				<a href="{{entry.url}}">
-					{{ entry.title }}
-				</a>
-			{%- endfor %}
-		</nav>	
+	<!-- Favicon! -->
+	<link rel="icon" type="image/png" href="/assets/favicon.png" />
+</head>
 
-		<main id="skip">
-			{{ content | safe }}
-		</main>
+<body>
+	<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-				<!-- Current page: {{ page.url | htmlBaseUrl }} -->
-	</body>
+	<nav>
+		<h1>Amy</h1>
+		{%- for entry in collections.all | eleventyNavigation %}
+		<a href="{{entry.url}}">
+			{{ entry.title }}
+		</a>
+		{%- endfor %}
+	</nav>
+
+	<main id="skip">
+		{{ content | safe }}
+	</main>
+
+	<footer>
+		<div class="ring">
+			<p>Part of the <a href="https://fediring.net/">Fediring</a>, use the two stripes to navigate between pages</p>
+			<div class="controls">
+				<a href="https://fediring.net/previous?host={{metadata.author.url}}"><button class="slant"></button></a>
+				<a href="https://fediring.net/next?host={{metadata.author.url}}"><button></button></a>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<p>amycatgirl, © 2024 · <a href="https://github.com/amycatgirl/nekoweb-page">Source code</a></p>
+			<div class="icons">
+				<img src="/assets/minitransflag.png" alt="Transgender flag.">
+				<img src="/assets/minilesbflag.png" alt="Sunset lesbian flag.">
+				<img src="/assets/cat.png" alt="Pixel art of a pink cat.">
+			</div>
+		</div>
+	</footer>
+
+	<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+</body>
+
 </html>

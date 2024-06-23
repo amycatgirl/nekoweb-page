@@ -3,15 +3,15 @@ body {
 }
 
 main div.catchphrase {
+    background: url("/assets/ditherpattern.png");
+    background-size: 20%;
+    background-color: #ffb9e0;
+    
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     gap: 30px;
-}
-
-div.catchphrase > img {
-    border-radius: 50%;
 }
 
 div.catchphrase > .list > h2 {
@@ -20,8 +20,18 @@ div.catchphrase > .list > h2 {
     color: var(--colour-emphasis);
 }
 
+
 @media screen and (max-width: 415px) {
     div.catchphrase {
         flex-direction: column;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    main div.catchphrase {
+        background-color: #5a365a;
+    }
+    div.catchphrase > .list > h2 {
+        color: var(--colour-foreground);
     }
 }

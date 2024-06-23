@@ -47,7 +47,6 @@ article pre {
 
 :not(pre) > code {
     padding: 3px;
-    border-radius: 5px;
     font-size: inherit;
 }
 

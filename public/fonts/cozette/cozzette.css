@@ -1,0 +1,7 @@
+@font-face {
+	font-family: Cozette;
+	font-style: normal;
+	font-weight: 400;
+	src: local("CozetteVector"), url(/fonts/cozette/CozetteVector.ttf) format("truetype");
+	font-display: swap;
+}

@@ -1,6 +1,7 @@
 module.exports = {
 	title: "Amy's Website",
 	url: "https://amycatgirl.nekoweb.org/",
+	url_short: "amycatgirl.nekoweb.org",
 	language: "en-GB",
 	description: "Developer, designer and full-time catgirl",
 	author: {

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UITest</title>
+</head>
+<body style="margin:0;padding:0;background-image: url('/assets/checkpattern.png'); background-size: 15%; color:white;">
+        <div style="display: flex; width: 100%; height: 100%; justify-content: center; gap: 50px; margin-bottom: 20px;">
+            <div style="margin: 15px; height: fit-content; border: 3px groove palevioletred; width: 30rem; padding: 10px;">
+                <h2>Posts</h2>
+                {% set postslist = collections.posts %}
+                {% include "postlist_ugly.njk" %}
+            </div>
+            <div style="width: 100%;">
+                <center>
+                    <h1>Hi. I'm <span style="color:pink">Amy</span></h1>
+                </center>
+                <p>I am a 17 year old developer who likes cats and furries.</p>
+                <p>I spend most of my time creating random, somewhat useless applications with the intent<br> of learning and having fun.</p>
+                <p>
+                    I am currently cursing through a half-time job at dominican tender startup LicitaHoy<br> as a backend developer, writting python.
+                    Even though I am well versed with javascript and typescript.
+                </p>
+                <p>Here is a bunch of information about me:</p>
+                    <table border="1">
+                        <th>
+                            Fun facts
+                        </th>
+                        <tr>
+                            <td>I am queer. More specifically, transgender and lesbian. Pronouns are <code>she/her</code>.</td>
+                        </tr>
+                        <tr>
+                            <td>I don't really like CSS, but I am pretty good with it.</td>
+                        </tr>
+                        <tr>
+                            <td>Even though I don't have cats at home, I love and cherish every single one of them.</td>
+                        </tr>
+                        <tr>
+                            <td>I have two wishes, one is to be with my girlfriend one day, and two, become a cat.</td>
+                        </tr>
+                    </table>
+                <br/>
+                <img src="/assets/cat.gif" />
+
+                <p>Some of my projects include:</p>
+
+                <table border="1">
+                    <th>
+                        Project
+                    </th>
+                    <th>
+                        State
+                    </th>
+                    <th>
+                        Is Open Source
+                    </th>
+                    <th>
+                        Link
+                    </th>
+
+                    <tr>
+                        <td>
+                            Crescent
+                        </td>
+                        <td>
+                            On hiatus
+                        </td>
+                        <td>
+                            No
+                        </td>
+                        <td>
+                            <a href="https://github.com/upryzing/crescent">Upryzing Github</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            TempStore
+                        </td>
+                        <td>
+                            Finished
+                        </td>
+                        <td>
+                            Yes
+                        </td>
+                        <td>
+                            <a href="https://github.com/amycatgirl/tempstore">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            MultiSocial
+                        </td>
+                        <td>
+                            In progress
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Dyna
+                        </td>
+                        <td>
+                            On hiatus
+                        </td>
+                        <td>
+                            Yes
+                        </td>
+                        <td>
+                            <a href="https://github.com/amycatgirl/dyna-testing">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sketchvolt
+                        </td>
+                        <td>
+                            Finished
+                        </td>
+                        <td>
+                            Yes
+                        </td>
+                        <td>
+                            <a href="https://github.com/amycatgirl/sketchvolt">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            GoNotifyMe
+                        </td>
+                        <td>
+                            Discontinued
+                        </td>
+                        <td>
+                            Yes
+                        </td>
+                        <td>
+                            <a href="https://github.com/amycatgirl/gonotifyme">GitHub</a>
+                            <a href="https://codeberg.org/amycatgirl/gonotifyme">Codeberg</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin: 15px; height: fit-content; border: 3px groove palevioletred; width: 30rem; padding: 10px;">
+                <h2>Misc</h2>
+                <p>fedi: @amycatgirl@wetdry.world</p>
+                <p>bsky: @amycatgirl.bsky.social</p>
+                <p>matrix: @amycatgirl:catgirl.cloud</p>
+                <p>xmpp: amycatgirl@wetdry.world</p>
+
+                <hr style="border:none;border-top: 2px dotted palevioletred;"/>
+                <br />
+
+                <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+                    <img src="/assets/8831.png" width=88 height=31 alt="Dark 88x31 button with pink text that reads: amycatgirl" />
+                    <a href="https://nekoweb.org"><img src="https://nekoweb.org/static/assets/buttons/button5.gif" alt="Animated 88x11 Button. The button says 'Nekoweb; Web is for cats' with a gray cat looking at the reader."></a>
+                    <a href="https://sweetcoffy.pages.gay" target="_blank"><img src="https://sweetcoffy.pages.gay/assets/button.png" alt="SweetCoffy" title="SweetCoffy"></a>
+                    <a href="https://sneexy.pages.gay"><img src="https://sneexy.pages.gay/assets/buttons/sneexy.png" alt="Sneexy" title="Sneexy"></a>
+                    <img src="https://capstasher.neocities.org/88x31Buttons/antinft_002.gif" width=88 height=31 alt="Button that reads: No nazi, no fascism, no racism" />
+                    <img src="https://capstasher.neocities.org/88x31Buttons/best_chrome.gif" alt="Button that reads: Best viewed with Chrome" width=88 height=31 />
+                    <a href="https://dillo-browser.github.io/pec/"><img src="https://dillo-browser.github.io/pec/class-A.png" alt="All functionality works when JS is disabled." width="88" height="31" /></a>
+                    <img src="https://anlucas.neocities.org/linux_powered.gif" width="88" height="31" />
+                    <img src="/assets/thevoid.gif" width="88" height="31" />
+                    <img src="/assets/transnow2.gif" width="88" height="31" />
+                    <img src="/assets/valid-html5.gif" width="88" height="31" />
+                    <a href="/feed/feed.xml"><img src="/assets/valid-rss.gif" width="88" height="31" /></a>
+                    <img src="/assets/wii.gif" width="88" height="31" />
+                    <a href="https://wetdry.world/@amycatgirl"><img src="/assets/mastodon_button.gif" width="88" height="31" /></a>
+                    <img src="/assets/firefoxbtn.gif" width="88" height="31" />
+                    <img src="https://fediring.net/static/badges/1.gif" width="88" height="31" />
+                    <a href="https://tauon.dev/" target="_blank">
+                        <img
+                            src="https://tauon.dev/images/88x31/lily.png"
+                            alt="lily"
+                            width="88"
+                            height="31"
+                            style="image-rendering: pixelated"
+                            title="do hotlink my button!"
+                        />
+                    </a>
+                    <a href="https://nano.lgbt">
+                        <img src="https://nano.lgbt/buttons/nano.png" width="88" height="31" />
+                    </a>
+                    <a href="https://maven.pages.gay">
+                        <img src="https://maven.pages.gay/MavenButton.png" width="88" height="31" />
+                    </a>
+                    <a href="https://freeplay.floof.company">
+                        <img src="https://freeplay.floof.company/assets/buttons/free.gif" width="88" height="31"/>
+                    </a>
+                    <a href="https://wetdry.world">
+                        <img src="/assets/wetdryworld-sweeney.png" width="88" height="31" />
+                    </a>
+                    <a href="https://houl.floof.company">
+                        <img src="https://houl.floof.company/assets/img/button.png" width="88" height="31" />
+                    </a>
+                    <img src="/assets/tyg.gif" width="88" height="31" />
+                    <a href="https://maxy.top">
+                        <img src="/assets/maxybtn.png" width="88" height="31" />
+                    </a>
+                    <img src="/assets/zilog.jpeg" width="88" height="31" />
+                    <img src="/assets/cssdif.gif" width="88" height="31" />
+                    <a src="https://easrng.net">
+                        <img src="https://badges.easrng.net/easrng.gif" width="88" height="31" />
+                    </a>
+                    <a href="https://oli.pages.gay">
+                        <img src="https://oli.pages.gay/WebButton.svg" width="88" height="31" />
+                    </a>
+                    <img src="/assets/ben.png" width="88" height="31" />
+                    <iframe src="//incr.easrng.net/badge?key=amycatgirl" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+                    <a href="https://trypancakes.com">
+                        <img src="https://trypancakes.com/assets/88x31.png" width="88" height="31" />
+                    </a>
+                    <a href="https://labyrinth.zone/users/yassie_j">
+                        <img src="/assets/yassie_j.gif" width="88" height="31"/>
+                    </a>
+                    <a href="https://geartoward.jp.net">
+                        <img src="https://geartoward.jp.net/imgs/button/GTGW.png" width="88" height="31" />
+                    </a>
+                    <img src="/assets/love_blahaj.gif" width="88" height="31" />
+                    <img loading="lazy" src="/assets/oktopirate.gif" alt="It's morally okay to pirate from triple-A" title="It's morally okay to pirate from triple-A" />
+                </div>
+            </div>
+        </div>
+
+    <center>
+        <footer style="overflow-x: clip;">
+            <p>amycatgirl © 2024 · <a href="https://github.com/amycatgirl/nekoweb-page" style="color: deeppink;" >source</a></p>
+            <p>
+				<a style="color: white;" href="https://fediring.net/previous?host={{metadata.url_short}}"><</a>
+				<a style="color: white;" href="https://fediring.net/">Part of the fediring</a>
+				<a style="color: white;" href="https://fediring.net/next?host={{metadata.url_short}}">></a>
+            </p>
+            <a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=hmxpqdaa&nd=6&style=109" border="0" alt="website counter"></a>
+        </footer>
+    </center>
+    <style type="text/css">
+        @import url("/fonts/cozette/cozette.css");
+        body { font-family: "Cozette", monospace; }
+        a { color: deeppink; }
+    </style>
+</body>
+</html>
